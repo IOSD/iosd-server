@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ <html>
+     <head>
+         <title>Membership Card:{{Name}}</title>
+         <style type="text/css">
+             body {
+                 font-weight: 200;
+                                  
+             }
+             .wrapper{
+                 height:311px;
+                     width:527px;
+                 background-image: url(template.jpg);
+                 color:white;
+                 font:Helvetica;
+                
+                 
+                 
+             }
+             #footer
+             {
+                 padding-left:330px;
+
+                 
+                 
+                 
+             }
+         </style>
+         <link href="https://fonts.googleapis.com/css?family=Crete+Round|Lato" rel="stylesheet">
+     </head>
+     <body>
+         <div>Membership Card</div>
+         <div class='wrapper'>
+             <div style="text-align:center;color:lavender;font-family:Crete Round;font-weight:200;font-size:20px">MEMBERSHIP CARD</div>
+        <div style="padding-left:20px;padding-top:150px;font-weight:600px;text-transform:uppercase;font-size:2em;font-family:Arial">{{name}}</div>     
+             <div style="padding-top:3px;padding-left:30px;font-size:20px;font-weight:300;">{{ID}}</div>
+             <div id = "footer" style="font-weight:100;font-size:18px;">Member Since {{date}}</div>
+             
+     </div>
+     </body>
+ </html>
