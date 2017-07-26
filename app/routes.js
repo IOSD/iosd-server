@@ -1,3 +1,7 @@
+var path = require('path');
+var eventsdata = require('./demodata.js')
+
+
 module.exports = function(app, passport) {
 
 // normal routes ===============================================================
@@ -6,6 +10,28 @@ module.exports = function(app, passport) {
     app.get('/', function(req, res) {
         res.render('index.ejs');
     });
+
+
+    // Events Routes
+    
+    app.get('/events' , function(req, res) {
+        res.sendfile('static/events.html');
+    });
+
+    app.get('/events-admin' , function(req, res) {
+        res.sendfile('static/event-admin/index.html');
+    });
+
+    app.post('/events-admin' , function(req, res) {
+        console.log(req.body);
+        res.json(req.body);
+    });
+
+    app.get('/getevents' , function(req, res) {
+        res.json(eventsdata);
+    });
+
+
 
     // PROFILE SECTION =========================
     app.get('/profile', isLoggedIn, function(req, res) {
