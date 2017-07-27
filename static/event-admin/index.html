@@ -90,10 +90,10 @@
       <!-- This is our clonable table line -->
       <tr class="hide">
         <td contenteditable="true">URL</td>
-        <td contenteditable="true">DD-MM-YY HH:MM</td>
-        <td contenteditable="true">DD-MM-YY HH:MM</td>
+        <td contenteditable="true">YYYY-MM-DD HH:MM:SS</td>
+        <td contenteditable="true">YYYY-MM-DD HH:MM:SS</td>
         <td contenteditable="true">Lorem Ispum</td>
-        <td contenteditable="true">info-warning</td>
+        <td contenteditable="true">event-info </td>
 
         <td>
           <span class="table-remove glyphicon glyphicon-remove"></span>
@@ -180,11 +180,11 @@
         children.eq(0).text(val.url);
         var start = new Date(parseInt(val.start));
         // console.log(start)
-        var formattedDate = moment(start).format('DD-MM-YY HH:MM');
+        var formattedDate = moment(start).format('YYYY-MM-DD HH:MM:SS');
         children.eq(1).text(formattedDate)
         
         var end = new Date(parseInt(val.end));
-        var formattedDate = moment(end).format('DD-MM-YY HH:MM');
+        var formattedDate = moment(end).format('YYYY-MM-DD HH:MM:SS');
         children.eq(2).text(formattedDate)
         // children.eq(2).text(val.end)
         children.eq(3).text(val.title)
@@ -244,6 +244,12 @@
       
       data.push(h);
     });
+
+    data.forEach(function(item) {
+      item.start = new Date(item.start).getTime() ;
+      item.end =  new Date(item.end).getTime() ;
+      console.log(item);
+    })
     
     // Output the result
     // $EXPORT.text(JSON.stringify(data , null , indent=4));

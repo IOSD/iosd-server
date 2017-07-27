@@ -31,12 +31,12 @@ module.exports = function(app, passport) {
         } , function(err) {
             res.status(400).send(err);
         });
-        // var event = new Event(req.body);
-        // event.save().then(function(doc) {
-        //     res.json(doc);
-        // } , function(err) {
-        //     res.status(400).send(err);
-        // })
+        var event = new Event(req.body);
+        event.save().then(function(doc) {
+            res.json(doc);
+        } , function(err) {
+            res.status(400).send(err);
+        })
     });
 
     app.get('/getevents/:college' , function(req, res) {
