@@ -1,5 +1,6 @@
 var path = require('path');
-var eventsdata = require('./demodata.js')
+var eventsdata = require('./demodata');
+var Event = require('./models/event');
 
 
 module.exports = function(app, passport) {
@@ -24,11 +25,54 @@ module.exports = function(app, passport) {
 
     app.post('/events-admin' , function(req, res) {
         console.log(req.body);
-        res.json(req.body);
+        // require('./enterdata');
+        Event.update( { college : req.body.college }, req.body, { upsert : true }).then(function(doc) {
+            res.json(doc);
+        } , function(err) {
+            res.status(400).send(err);
+        });
+        // var event = new Event(req.body);
+        // event.save().then(function(doc) {
+        //     res.json(doc);
+        // } , function(err) {
+        //     res.status(400).send(err);
+        // })
     });
 
-    app.get('/getevents' , function(req, res) {
-        res.json(eventsdata);
+    app.get('/getevents/:college' , function(req, res) {
+        var college = req.params.college
+        console.log(college);
+        if(college == 'search'){
+            Event.find().then(function(data) {
+                di = {}
+                data.forEach(function(item) {
+                    di[item.college] = item.college_name
+                })
+                res.json(di);
+            } , function(err) {
+                res.status(400).send(err);
+            });
+        } else { 
+            Event.find({college: college}).then(function(data) {
+                console.log('Found')
+                // console.log(data[0]);
+                console.log(typeof data[0] , 'type')
+                var di = {
+                    'college' : data[0].college ,
+                    'college_name' : data[0].college_name ,
+                    'success' : 1 ,
+                    'events' : data[0].events ,
+                    'result' : data[0].events ,
+                }
+                console.log('di' , di)
+                // console.log(JSON.stringigy(di , null ,4))
+                res.json(di);
+            } , function(err) {
+                console.log('Error')
+                res.status(400).send(err);
+            })
+
+        }
     });
 
 

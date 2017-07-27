@@ -2,11 +2,13 @@
 
 	"use strict";
 	function getEventsData () {
-		return json.l
+		return 1
 	}
 
+	window.collegeSelected = 'dtu' ;
+
 	var options = {
-		events_source: '/getevents',
+		events_source: '/getevents/' + window.collegeSelected ,
 		view: 'month',
 		tmpl_path: '/bootstrap-calendar/tmpls/',
 		tmpl_cache: false,

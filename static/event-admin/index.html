@@ -53,6 +53,10 @@
 <body>
 <h1 class="text-primary text-center" style="padding: 20px">Admin</h1>
 <div class="text-primary text-center">
+  <select name="getcollege" id="mySelect" multiple>
+    <option value="addnew">Add New</option>
+  </select>
+  <br>
   <button id='get-data'>Get Data</button>
 </div>
 <div class="container">
@@ -61,11 +65,12 @@
     <span class="table-add glyphicon glyphicon-plus"></span>
     <br><br>
     <table class="table">
-      <tr>
+      <tr class="header">
         <th>URl</th>
-        <th>Start Date</th>
-        <th>End Date</th>
+        <th>Start</th>
+        <th>End</th>
         <th>Descrption</th>
+        <th>class</th>
         <th></th>
         <th></th>
       </tr>
@@ -88,6 +93,8 @@
         <td contenteditable="true">DD-MM-YY HH:MM</td>
         <td contenteditable="true">DD-MM-YY HH:MM</td>
         <td contenteditable="true">Lorem Ispum</td>
+        <td contenteditable="true">info-warning</td>
+
         <td>
           <span class="table-remove glyphicon glyphicon-remove"></span>
         </td>
@@ -98,12 +105,46 @@
       </tr>
     </table>
   </div>
-  
+  <br>
+  <input type="text" id='college_selected'>  
+  <input type="text" id='college_name_selected'>  
+  <br>
   <button id="export-btn" class="btn btn-primary">Export Data</button>
   <p id="export"></p>
 </div>
 
 <script>
+
+  $.getJSON('getevents/search', function(data) {
+      var colleges = data
+
+      var mySelect = $('#mySelect');
+      $.each(colleges, function(val, text) {
+          mySelect.append(
+              $('<option></option>').val(val).html(text)
+          );
+      });
+
+  })
+
+  var removeRows = function() {
+      $('#table tr').each( function(index){
+        var classes = $(this).attr('class') ;
+        console.log(classes);
+        if( classes != 'hide' && classes != 'header') {
+          // console.log(classes , 'Success');
+          $(this).remove();
+        }
+    });
+
+  }
+
+  var addnewEvent = function() {
+    removeRows();
+    $('#college_selected').val('') ;
+    $('#college_name_selected').val('');
+  }
+
   var $TABLE = $('#table');
   var $BTN = $('#export-btn');
   var $EXPORT = $('#export');
@@ -113,14 +154,26 @@
   $('#get-data').click(function () {
 
     console.log('Clicked');
-    $.getJSON( "getevents/", function( data ) {
-      var items = [];
-      if( !data.success ){
-        alert('Error');
-        return ;
-      }
+    var value = $('#mySelect').val() ;
+    var value_text = $("#mySelect option:selected").text();
+    if (value == 'addnew') {
+      addnewEvent();
+      return;
+    }
 
-      $.each( data.result, function( index, val ) {
+    $('#college_selected').val(value) ;
+    $('#college_name_selected').val(value_text);
+
+    var url = "getevents/" + value ;
+    console.log(url)
+    $.getJSON( url , function( data ) {
+      var items = [];
+      // if( !data.success ){
+      //   alert('Error');
+      //   return ;
+      // }
+      removeRows();
+      $.each( data.events, function( index, val ) {
         var $clone = $TABLE.find('tr.hide').clone(true)
         var children = $clone.children() ;
         // console.log(children)
@@ -135,6 +188,8 @@
         children.eq(2).text(formattedDate)
         // children.eq(2).text(val.end)
         children.eq(3).text(val.title)
+        children.eq(4).text(val.class)
+
         $clone.removeClass('hide table-line')
         $TABLE.find('table').append($clone);
       });
@@ -193,8 +248,18 @@
     // Output the result
     // $EXPORT.text(JSON.stringify(data , null , indent=4));
     console.log(data);
+
+    var college = $('#college_selected').val()
+    var college_name = $('#college_name_selected').val()
+
+    if (college == '' || college_name == '') {
+      alert('College Name or ID Cant Be Empty');
+      return;
+    }
+
     var payload = {
-      'college' : 'dtu' ,
+      'college' : $('#college_selected').val() ,
+      'college_name' : $('#college_name_selected').val() ,
       'events' : data 
     }
     $.post( "events-admin", payload)
