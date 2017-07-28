@@ -1,0 +1,86 @@
+.invisible {
+  display: none;
+}
+
+.table-editable {
+  position: relative;
+}
+.table-editable .glyphicon {
+  font-size: 20px;
+}
+
+.table-remove {
+  color: #700;
+  cursor: pointer;
+}
+.table-remove:hover {
+  color: #f00;
+}
+
+.table-up, .table-down {
+  color: #007;
+  cursor: pointer;
+}
+.table-up:hover, .table-down:hover {
+  color: #00f;
+}
+
+.table-add {
+  color: #070;
+  cursor: pointer;
+  padding: 100px;
+}
+.table-add:hover {
+  color: #0b0;
+}
+
+.college-details {
+  padding: 50px;
+}
+
+.export {
+  padding-top: 30px;
+}
+.invisible {
+  display: none;
+}
+
+.table-editable {
+  position: relative;
+}
+.table-editable .glyphicon {
+  font-size: 20px;
+}
+
+.table-remove {
+  color: #700;
+  cursor: pointer;
+}
+.table-remove:hover {
+  color: #f00;
+}
+
+.table-up, .table-down {
+  color: #007;
+  cursor: pointer;
+}
+.table-up:hover, .table-down:hover {
+  color: #00f;
+}
+
+.table-add {
+  color: #070;
+  cursor: pointer;
+  padding: 10px;
+}
+.table-add:hover {
+  color: #0b0;
+}
+
+.college-details {
+  padding: 50px;
+}
+
+.export {
+  padding-top: 30px;
+}

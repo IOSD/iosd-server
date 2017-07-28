@@ -1,4 +1,4 @@
-(function($) {
+var setCalendar = function($) {
 
 	"use strict";
 	function getEventsData () {
@@ -39,9 +39,9 @@
 	};
 
 	var calendar = $('#calendar').calendar(options);
+	calendar.setOptions({modal: '#myModal'});
+	// calendar.setOptions({modal_t});
 
-
-	calendar.setOptions({modal: '#events-modal'});
 
 
 	$('.btn-group button[data-calendar-nav]').each(function() {
@@ -57,4 +57,26 @@
 			calendar.view($this.data('calendar-view'));
 		});
 	});
-}(jQuery));
+}
+
+
+$.getJSON('getevents/search', function(data) {
+    var colleges = data
+
+    var mySelect = $('#mySelect');
+    $.each(colleges, function(val, text) {
+      mySelect.append(
+        $('<option></option>').val(val).html(text)
+        );
+    });
+
+  })
+
+
+
+$('#get-data').click(function() {
+	$('.page-header').removeClass('hide');
+	window.collegeSelected = $('#mySelect').val() ;
+	setCalendar(jQuery);
+
+})
