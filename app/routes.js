@@ -1,7 +1,7 @@
 var path = require('path');
 var eventsdata = require('./demodata');
 var Event = require('./models/event');
-
+var pdfGen = require('./../pdf.js');
 
 module.exports = function(app, passport) {
 
@@ -83,6 +83,16 @@ module.exports = function(app, passport) {
             user : req.user
         });
     });
+
+    app.post('/profile/pdf',function(req,res){
+        var view = req.body ;
+        pdfGen.generatePdf(view , function(response){
+            console.log(response);
+            res.sendFile(response.filename);
+        });
+        
+    });
+
 
     // LOGOUT ==============================
     app.get('/logout', function(req, res) {
