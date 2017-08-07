@@ -50,7 +50,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="#">
         <img src="assets/img/IOSD-logo.png" alt="brand">
       </a>
     </div>
@@ -58,16 +58,16 @@
 
         <ul class="nav navbar-nav hidden-xs">
           <li class="active">
-            <a href="index.html">Dashboard</a>
+            <a href="#">Dashboard</a>
           </li>
           <li>
-            <a href="profile/index.html">Library</a>
+            <a href="../static/profile/index.html">Library</a>
           </li>
           <li>
-            <a data-toggle="modal" href="#msgModal">Blogs</a>
+            <a href="../static/single.html">Blogs</a>
           </li>
           <li>
-            <a href="docs/index.html">Video Tutorials</a>
+            <a href="#">Video Tutorials</a>
           </li>
         </ul>
 
@@ -85,15 +85,15 @@
         </ul>
         
         <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
-          <li><a href="index.html">Dashboard</a></li>
-          <li><a href="profile/index.html">Library</a></li>
-          <li><a href="notifications/index.html">Blog</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="../static/profile/index.html">Library</a></li>
+          <li><a href="../static/single.html">Blog</a></li>
           <li><a href="#" data-action="growl">Video Tutorials</a></li>
-          <li><a href="login/index.html">Logout</a></li>
+          <li><a href="login.ejs">Logout</a></li>
         </ul>
 
         <ul class="nav navbar-nav hidden">
-          <li><a href="login/index.html">Logout</a></li>
+          <li><a href="login.ejs">Logout</a></li>
         </ul>
       </div>
   </div>
@@ -105,14 +105,14 @@
     <div class="col-md-3">
       <div class="panel panel-default panel-profile m-b-md">
         <div class="panel-body text-center">
-          <a href="index.html">
+          <a href="dashboard.ejs">
             <img
               class="panel-profile-img"
               src="assets/img/worker47_jyuc7u.svg">
           </a>
 
           <h5 class="panel-title">
-            <a class="text-inherit" href="profile/index.html"><%=user.name%></a>
+            <a class="text-inherit"><%=user.name%></a>
           </h5>
 
           <p class="m-b-md"><%=user.college%></p>
@@ -177,7 +177,7 @@ Member
     <div class="col-md-3 a">
       <div class="alert alert-warning alert-dismissible hidden-xs" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <a class="alert-link" href="profile/index.html">Welcome to IOSD!</a> You've got the Knack to Hack.
+        <a class="alert-link">Welcome to IOSD!</a> You've got the Knack to Hack.
       </div>
 
         <div class="panel panel-default visible-md-block visible-lg-block">
