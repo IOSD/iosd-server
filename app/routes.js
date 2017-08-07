@@ -12,7 +12,6 @@ module.exports = function(app, passport) {
         res.render('index.ejs');
     });
 
-
     // Events Routes
     
     app.get('/events' , function(req, res) {
@@ -78,8 +77,8 @@ module.exports = function(app, passport) {
 
 
     // PROFILE SECTION =========================
-    app.get('/profile', isLoggedIn, function(req, res) {
-        res.render('profile.ejs', {
+    app.get('/dashboard', isLoggedIn, function(req, res) {
+        res.render('dashboard', {
             user : req.user
         });
     });
@@ -104,6 +103,18 @@ module.exports = function(app, passport) {
 // AUTHENTICATE (FIRST LOGIN) ==================================================
 // =============================================================================
 
+    app.get('/firstlogin' , function(req,res){
+        res.send('OK');
+    });
+
+    app.post('/firstLogin' , function(req,res){
+        res.send('OK');
+    });
+
+
+
+
+
     // locally --------------------------------
         // LOGIN ===============================
         // show the login form
@@ -113,7 +124,7 @@ module.exports = function(app, passport) {
 
         // process the login form
         app.post('/login', passport.authenticate('local-login', {
-            successRedirect : '/profile', // redirect to the secure profile section
+            successRedirect : '/dashboard', // redirect to the secure profile section
             failureRedirect : '/login', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }));
@@ -121,12 +132,13 @@ module.exports = function(app, passport) {
         // SIGNUP =================================
         // show the signup form
         app.get('/signup', function(req, res) {
+            console.log(req);
             res.render('signup.ejs', { message: req.flash('signupMessage') });
         });
 
         // process the signup form
         app.post('/signup', passport.authenticate('local-signup', {
-            successRedirect : '/profile', // redirect to the secure profile section
+            successRedirect : '/dashboard', // redirect to the secure profile section
             failureRedirect : '/signup', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }));
@@ -273,3 +285,4 @@ function isLoggedIn(req, res, next) {
 
     res.redirect('/');
 }
+
