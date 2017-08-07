@@ -1,7 +1,8 @@
 var path = require('path');
 var eventsdata = require('./demodata');
 var Event = require('./models/event');
-var pdfGen = require('./../pdf.js');
+// var pdfGen = require('./../pdf.js');
+var idcard = require('./png');
 
 module.exports = function(app, passport) {
 
@@ -78,9 +79,12 @@ module.exports = function(app, passport) {
 
     // PROFILE SECTION =========================
     app.get('/dashboard', isLoggedIn, function(req, res) {
-        res.render('dashboard', {
-            user : req.user
-        });
+        idcard.topng('DhruvRamdev' , '2016' , function(data){
+            res.render('dashboard', {
+                user : req.user , 
+                idcard : data
+            });
+        });   
     });
 
     app.post('/profile/pdf',function(req,res){
