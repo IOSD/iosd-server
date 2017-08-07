@@ -10,9 +10,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
-* {margin: 0; padding: 0;}
+/* * {margin: 0; padding: 0;} */
 
-html {
+body {
 	height: 100%;
 	/*Image only BG fallback*/
 	
@@ -26,6 +26,7 @@ body {
 }
 /*form styles*/
 #msform {
+	padding-top: 50px;
 	width: 400px;
 	margin: 50px auto;
 	text-align: center;
@@ -178,7 +179,13 @@ body {
             <a href="/login">Login</a>
           </li>
         </ul>
-
+				<ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+          <li>
+            <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
+              <!-- <img class="img-circle" src="assets/img/avatar-dhg.png"> -->
+            </button>
+          </li>
+        </ul>
         
         <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
           <li><a href="http://www.iosd.tech">Main Site</a></li>
@@ -231,7 +238,7 @@ body {
   </fieldset>
 </form>
 
-        <script src="../static/assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
 <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
 
         <script>     
