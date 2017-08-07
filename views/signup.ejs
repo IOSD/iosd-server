@@ -202,7 +202,7 @@ body {
   </div>
 </nav>
 
-<form id="msform" action="/signup" method="post">
+<form id="msform" action="/signup" method="POST">
   <!-- progressbar -->
   <ul id="progressbar">
     <li class="active">Account Setup</li>
@@ -233,15 +233,24 @@ body {
     <input type="text" name="fname" placeholder="Name" />
     <input type="text" name="lname" placeholder="College" />
     <input type="text" name="phone" placeholder="Phone" />
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+    <input type="file" onchange="encodeImageFileAsURL(this)" />
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+          <button type="submit" >Submit</button>
   </fieldset>
 </form>
-
+       
         <script src="assets/js/jquery.min.js"></script>
 <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
 
         <script>     
+            function encodeImageFileAsURL(element) {
+  var file = element.files[0];
+  var reader = new FileReader();
+  reader.onloadend = function() {
+    console.log('RESULT', reader.result)
+  }
+  reader.readAsDataURL(file);
+}
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
