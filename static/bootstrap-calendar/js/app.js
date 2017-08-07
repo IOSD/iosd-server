@@ -5,14 +5,14 @@ var setCalendar = function($) {
 		return 1
 	}
 
-	window.collegeSelected = 'dtu' ;
+	// window.collegeSelected = 'dtu' ;
 
 	var options = {
 		events_source: '/getevents/' + window.collegeSelected ,
 		view: 'month',
 		tmpl_path: '/bootstrap-calendar/tmpls/',
 		tmpl_cache: false,
-		day: '2013-03-12',
+		day: getDate(),
 		onAfterEventsLoad: function(events) {
 			if(!events) {
 				return;
@@ -75,8 +75,24 @@ $.getJSON('getevents/search', function(data) {
 
 
 $('#get-data').click(function() {
+	$('#calendar').empty();
 	$('.page-header').removeClass('hide');
 	window.collegeSelected = $('#mySelect').val() ;
 	setCalendar(jQuery);
 
 })
+
+function getDate(){
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+
+	var yyyy = today.getFullYear();
+	if(dd<10){
+		dd='0'+dd;
+	} 
+	if(mm<10){
+		mm='0'+mm;
+	} 
+	return yyyy+ '-' + mm + '-' + dd;
+}

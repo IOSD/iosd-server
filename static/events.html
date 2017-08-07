@@ -7,14 +7,75 @@
 	<meta name="keywords" content="jQuery,Bootstrap,Calendar,HTML,CSS,JavaScript,responsive,month,week,year,day">
 	<meta name="author" content="Serhioromano">
 	<meta charset="UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href="assets/css/toolkit.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="assets/css/application.css" rel="stylesheet">
 <!-- 
 	<link rel="stylesheet" href="bootstrap-calendar/components/bootstrap2/css/bootstrap.css">
 	<link rel="stylesheet" href="bootstrap-calendar/components/bootstrap2/css/bootstrap-responsive.css"> -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="bootstrap-calendar/css/calendar.css">
+	<style>
+		.navbar {
+			position: inherit
+		}
+	</style>
+
 </head>
 <body>
+	        
+<nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://www.iosd.tech">
+        <img src="assets/img/IOSD-logo.png" alt="brand">
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-collapse-main">
+
+        <ul class="nav navbar-nav hidden-xs">
+          <li >
+            <a href="http://www.iosd.tech">Main Site</a>
+          </li>
+          <li class="active">
+            <a href="#">Signup</a>
+          </li>
+          <li>
+            <a href="/login">Login</a>
+          </li>
+        </ul>
+				<ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+          <li>
+            <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
+              <!-- <img class="img-circle" src="assets/img/avatar-dhg.png"> -->
+            </button>
+          </li>
+        </ul>
+        
+        <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+          <li><a href="http://www.iosd.tech">Main Site</a></li>
+          
+          
+            <li><a href="#">Sign Up</a></li>
+      <li><a href="/login"></a>Login</li>
+        </ul>
+
+        <ul class="nav navbar-nav hidden">
+          <li><a href="login.ejs">Logout</a></li>
+        </ul>
+      </div>
+  </div>
+</nav>
+
 <div class="container">
 	<div class="hero-unit">
 		<h1>Events</h1>
