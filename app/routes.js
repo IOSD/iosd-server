@@ -3,6 +3,7 @@ var eventsdata = require('./demodata');
 var Event = require('./models/event');
 // var pdfGen = require('./../pdf.js');
 var idcard = require('./png');
+var fs = require('fs');
 
 module.exports = function(app, passport) {
 
@@ -79,7 +80,8 @@ module.exports = function(app, passport) {
 
     // PROFILE SECTION =========================
     app.get('/dashboard', isLoggedIn, function(req, res) {
-        idcard.topng('DhruvRamdev' , '2016' , function(data){
+        idcard.topng('DhruvRamdev' , '2016' ,'base64' ,function(data){
+            console.log(data);
             res.render('dashboard', {
                 user : req.user , 
                 idcard : data
@@ -89,9 +91,33 @@ module.exports = function(app, passport) {
 
     app.post('/profile/pdf',function(req,res){
         var view = req.body ;
-        pdfGen.generatePdf(view , function(response){
-            console.log(response);
-            res.sendFile(response.filename);
+        console.log(view);
+        idcard.topdf(view , function(response){
+            console.log(response.fileName);
+            fs.readFile(response.fileName , function(err , data){
+                res.setHeader('Content-type', 'application/pdf');
+                console.log(data.toString('base64'));
+                res.end(data.toString('base64') , 'binary')
+            });
+            // var filename = "idcard.pdf"; 
+            // Be careful of special characters
+
+            // filename = encodeURIComponent(filename);
+            // Ideally this should strip them
+
+            // res.setHeader('Content-disposition', 'inline; filename="' + filename + '"');
+            
+
+            // stream.pipe(res);
+            // console.log(response);
+            // console.log(process.cwd());
+            // var file = fs.createReadStream(process.cwd()+ '/' + response.fileName);
+            // var stat = fs.statSync(process.cwd()+ '/' + response.fileName);
+            // res.setHeader('Content-Length', stat.size);
+            // res.setHeader('Content-Type', 'application/pdf');
+            // res.setHeader('Content-Disposition', 'attachment; filename=quote.pdf');
+            // file.pipe(res);
+            // res.end();
         });
         
     });

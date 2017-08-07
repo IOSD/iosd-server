@@ -1,3 +1,14 @@
+$('#dwnldmembercard').on('click' , function(){
+  $.post('profile/pdf' , {
+    'name' : 'Dhruv',
+    'year' : '2016'
+  } , function (data) {
+        var win= window.open();
+        win.document.write('<style>* { margin:0 ; padding:0  }</style>')
+        win.document.write('<iframe src="data:application/pdf;base64,' + (data) + '" frameborder="0" style="width:100% ; height:100%" allowfullscreen></iframe>');
+  })
+});
+
 var $input = $('<div class="modal-body"><input type="text" class="form-control" placeholder="Message"></div>')
 
 $(document).on('click', '.js-msgGroup', function () {
