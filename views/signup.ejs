@@ -203,6 +203,9 @@
 	</nav>
 	
 	<form id="msform">
+		<div class="control-group warning hide" id='errorMessage'>
+
+		</div>
 		<!-- progressbar -->
 		<ul id="progressbar">
 			<li class="active">Account Setup</li>
@@ -213,9 +216,9 @@
 		<fieldset>
 			<h2 class="fs-title">Create your account</h2>
 			<h3 class="fs-subtitle">First Step!</h3>
-			<input type="text" name="email" placeholder="Email" />
-			<input type="password" name="password" placeholder="Password" />
-			<input type="password" name="cpassword" placeholder="Confirm Password" />
+			<input type="text" name="email" placeholder="Email" required/>
+			<input type="password" name="password" placeholder="Password" required/>
+			<input type="password" name="cpassword" placeholder="Confirm Password" required/>
 			<input type="button" name="next" class="next action-button" value="Next" />
 		</fieldset>
 		<fieldset>
@@ -230,12 +233,12 @@
 		<fieldset>
 			<h2 class="fs-title">Personal Details</h2>
 			<h3 class="fs-subtitle">Just There...</h3>
-			<input type="text" name="name" placeholder="Name" />
-			<input type="text" name="college" placeholder="College" />
-			<input type="text" name="phone" placeholder="Phone" />
-			<input type="file" id='profilepic' name="picture" onchange="encodeImageFileAsURL(this)" />
+			<input type="text" name="name" placeholder="Name" required/>
+			<input type="text" name="college" placeholder="College" required/>
+			<input type="number" name="phone" placeholder="Phone" required/>
+			<input type="file" id='profilepic' name="picture" required/>
 			<input type="button" name="previous" class="previous action-button" value="Previous" />
-			<button class="submit">Submit</button>
+			<button type='submit' class="submit" id='submit'>Submit</button>
 		</fieldset>
 	</form>
 	
@@ -251,13 +254,30 @@
 				// console.log('RESULT', reader.result)
 			}
 			reader.readAsDataURL(file);
-		}
+		} ;
+
+		function checkPassword(formData){
+			if (formData.password != formData.cpassword){
+				return false ;
+			}
+			return true ;
+		} ;
 		//jQuery time
 		var current_fs, next_fs, previous_fs; //fieldsets
 		var left, opacity, scale; //fieldset properties which we will animate
 		var animating; //flag to prevent quick multi-click glitches
 		
 		$(".next").click(function(){
+
+			// if (!$('#msform > fieldset')[0].checkValidity()) {
+			// 	$('#submit')[0].click();
+			// 	return ;
+			// }	
+			if (! $('#msform')[0].reportValidity()) {
+				console.log('Triggered');
+				return ;
+			}
+
 			if(animating) return false;
 			animating = true;
 			
@@ -330,10 +350,15 @@
 			});
 		});
 		
-		$(".submit").click(function(e){
+		$("#msform").submit(function(e){
 			e.preventDefault();
 			var formData = $("#msform").serializeArray().reduce(function(m,o){ m[o.name] = o.value; return m;}, {}) ;
 			console.log(formData);
+
+			if ( !checkPassword(formData) ) {
+				alert('Passowords Dont Match');
+				return ;
+			}
 
 			var element = $('#profilepic')[0];
 			// console.log('Element');
