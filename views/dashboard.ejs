@@ -72,14 +72,14 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
-          <li >
+          <!-- <li >
             <a class="app-notifications" href="notifications/index.html">
               <span class="icon icon-bell"></span>
             </a>
-          </li>
+          </li> -->
           <li>
             <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
-              <img class="img-circle" src="assets/img/avatar-dhg.png">
+              <img class="img-circle" src="<%=user.picture%>">
             </button>
           </li>
         </ul>
@@ -89,11 +89,11 @@
           <li><a href="profile/index.html">Library</a></li>
           <li><a href="single.html">Blog</a></li>
           <li><a href="#" data-action="growl">Video Tutorials</a></li>
-          <li><a href="login.ejs">Logout</a></li>
+          <li><a href="login">Logout</a></li>
         </ul>
 
         <ul class="nav navbar-nav hidden">
-          <li><a href="login.ejs">Logout</a></li>
+          <li><a href="login">Logout</a></li>
         </ul>
       </div>
   </div>
@@ -105,7 +105,7 @@
     <div class="col-md-3">
       <div class="panel panel-default panel-profile m-b-md">
         <div class="panel-body text-center">
-          <a href="dashboard.ejs">
+          <a href="dashboard">
             <img
               class="panel-profile-img"
               src="<%=user.picture%>">
@@ -120,7 +120,7 @@
           <ul class="panel-menu">
             <li class="panel-menu-item">
               <a href="#userModal" class="text-inherit" >
-Member            
+                Member            
               </a>
             </li>
           </ul>
@@ -129,14 +129,15 @@ Member
 
       <div class="panel panel-default visible-md-block visible-lg-block">
         <div class="panel-body">
-          <h5 class="m-t-0">About <small>· <a href="#">Edit</a></small></h5>
+          <h5 class="m-t-0">About <small>· <a href="#"></a></small></h5>
           <ul class="list-unstyled list-spaced">
               <li><i class="fa fa-university" aria-hidden="true"></i><span>&emsp;&ensp;&ensp;</span>Went to <a href="#"><%=user.college%></a></li>
               <li><span class="text-muted icon icon-calendar m-r"></span>&ensp;Member Since 12-12-2016</li>
-              <li><span class="text-muted icon icon-github m-r"></span>&ensp;<a href="#">Github ID</a></li>
-              <li><i class="fa fa-facebook" aria-hidden="true"></i>&emsp;&emsp;&ensp;<a href="#">FB ID</a></li>
-              <li><i class="fa fa-linkedin" aria-hidden="true"></i>&emsp;&emsp;<a href="#">LINKEDIN ID</a></li>      
-              <li><span class="text-muted icon icon-home m-r"></span>&ensp;Lives in <a href="#">New Delhi</a></li>
+              <!-- <li><span class="text-muted icon icon-github m-r"></span>&ensp;<a href="#"><%=user.picture%></a></li> -->
+              <li><i class="fa fa-twitter" aria-hidden="true"></i>&emsp;&emsp;&ensp;<a href="#"><%=user.twitter%></a></li>
+              <li><i class="fa fa-facebook" aria-hidden="true"></i>&emsp;&emsp;&ensp;<a href="#"><%=user.facebook%></a></li>
+              <li><i class="fa fa-linkedin" aria-hidden="true"></i>&emsp;&emsp;<a href="#"><%=user.linkedin%></a></li>      
+              <!-- <li><span class="text-muted icon icon-home m-r"></span>&ensp;Lives in <a href="#">New Delhi</a></li> -->
           </ul>
         </div>
       </div>
@@ -158,7 +159,7 @@ Member
         </li>
 
         
-        <li class="media list-group-item p-a">
+        <!-- <li class="media list-group-item p-a">
           <a class="media-left" href="#">
             <img
               class="media-object img-circle"
@@ -175,7 +176,7 @@ Member
               </p>
             </div>
           </div>
-        </li>
+        </li> -->
 
         
       </ul>
