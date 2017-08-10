@@ -101,6 +101,7 @@ module.exports = function (passport) {
                             newUser.name = req.body['name'];
                             newUser.phone = req.body.phone;
                             newUser.college = req.body.college;
+                            newUser.picture = req.body.picture;
 
                             newUser.isAdmin = false;
                             newUser.save(function (err) {
