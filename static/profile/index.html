@@ -48,7 +48,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../../views/dashboard.ejs">
+      <a class="navbar-brand" href="/dashboard">
         <img src="../assets/img/IOSD-logo.png" alt="brand">
       </a>
     </div>
@@ -56,7 +56,7 @@
 
         <ul class="nav navbar-nav hidden-xs">
           <li >
-            <a href="../../views/dashboard.ejs">Dashboard</a>
+            <a href="/dashboard">Dashboard</a>
           </li>
           <li class="active">
             <a href="profile/index.html">Library</a>
@@ -83,16 +83,13 @@
         </ul>
         
         <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
-          <li><a href="../../views/dashboard.ejs">Dashboard</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
           <li><a href="#">Library</a></li>
           <li><a href="../single.html">Blog</a></li>
           <li><a href="#" data-action="growl">Video Tutorials</a></li>
-          <li><a href="../login/index.html">Logout</a></li>
+          <li><a href="/login">Logout</a></li>
         </ul>
 
-        <ul class="nav navbar-nav hidden">
-          <li><a href="../login/index.html">Logout</a></li>
-        </ul>
       </div>
   </div>
 </nav>
@@ -100,11 +97,11 @@
 
 
 <div class="profile-header text-center"
-     style="background-image: url(../assets/img/iceland.jpg);">
-  <div class="container">
-    <div class="container-inner">
-      <h1 class="profile-header-user">IOSD Library</h1>
-      <p class="profile-header-bio">
+     style="background-image: url('http://www.jsums.edu/compscience/files/2014/06/compsc.png?x24088');">
+  <div class="container" >
+    <div class="container-inner" style="background-color:white;border: 4px solid #73AD21;">
+      <h1 class="profile-header-user " style="color:black;">IOSD Library</h1>
+      <p class="profile-header-bio" style="color:black;">
         The Only Place to find good and free programming resources.
       </p>
     </div>
@@ -113,27 +110,30 @@
   <nav class="profile-header-nav">
     <ul class="nav nav-tabs">
       <li class="active">
-        <a href="#">Java</a>
+        <a href="j" style="font-weight:300;">Java</a>
       </li>
       <li>
-        <a href="#ab">C++</a>
+        <a href="#c"style="font-weight:300;">C++</a>
       </li>
       <li>
-        <a href="#">Python</a>
+        <a href="#p"style="font-weight:300;">Python</a>
       </li>
     </ul>
   </nav>
 </div>
     
-    <div class="media wrap" style="border-radius:5px;background-color:gray;">
+    <div class="media wrap" style="border-radius:5px;background-color:#FDF5E6;border: 4px solid black;">
         <div class="post">
   <div class="media-left" style="padding-left:20px;">
     <img src="../assets/img/avatar-fat.jpg" class="media-object" style="width:100px">
   </div>
-  <div class="media-body" style="padding-left:20px;" >
+            
+            
+            
+  <div class="media-body" id="p" style="padding-left:20px;" >
     <h4 class="">John Doe</h4>
     <p>Lorem ipsum...</p>
-      <button class="btn btn-primary pull-right" type="button" style="margin-right:10px;">
+      <button class="btn btn-primary pull-right" type="button" style="margin-right:40px;">
   <span class="icon icon-download"></span>
   Download!
 </button>
@@ -141,22 +141,26 @@
     </div>
 </div>
 
-    <div class="media wrap" style="border-radius:10px;background-color:gray;">
+    
+    
+<div class="media wrap" style="border-radius:5px;background-color:#FDF5E6;border: 4px solid black;">
         <div class="post">
   <div class="media-left" style="padding-left:20px;">
     <img src="../assets/img/avatar-fat.jpg" class="media-object" style="width:100px">
   </div>
+            
+            
+            
   <div class="media-body" style="padding-left:20px;" >
     <h4 class="">John Doe</h4>
     <p>Lorem ipsum...</p>
-      <button class="btn btn-primary pull-right" type="button" style="margin-right:10px;">
+      <button class="btn btn-primary pull-right" type="button" style="margin-right:40px;">
   <span class="icon icon-download"></span>
   Download!
 </button>
         </div>
     </div>
 </div>
-
     
     
     <script src="../assets/js/jquery.min.js"></script>
