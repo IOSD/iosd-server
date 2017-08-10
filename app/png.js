@@ -30,7 +30,7 @@ function topng(name , year , type, callback) {
             } else if(type=='file') {
                 var fileName = `media/output.png` ;
                 loadedImage.write(fileName);
-                console.log(fileName);
+                // console.log(fileName);
                 callback(fileName);
             }
             
@@ -43,7 +43,7 @@ function topng(name , year , type, callback) {
 
 function topdf(view , callback){
 
-    console.log('view' , view);
+    // console.log('view' , view);
     var output =  `media/output.pdf` ;
     // var output = "file:///" + process.cwd() + `/media/${view.name}-output.pdf` ;
 

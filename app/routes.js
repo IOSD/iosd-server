@@ -81,7 +81,7 @@ module.exports = function(app, passport) {
     // PROFILE SECTION =========================
     app.get('/dashboard', isLoggedIn, function(req, res) {
         idcard.topng('DhruvRamdev' , '2016' ,'base64' ,function(data){
-            console.log(data);
+            // console.log(data);
             res.render('dashboard', {
                 user : req.user , 
                 idcard : data
@@ -91,7 +91,7 @@ module.exports = function(app, passport) {
 
     app.post('/profile/pdf',function(req,res){
         var view = req.body ;
-        console.log(view);
+        // console.log(view);
         idcard.topdf(view , function(response){
             console.log(response.fileName);
             fs.readFile(response.fileName , function(err , data){
@@ -162,7 +162,7 @@ module.exports = function(app, passport) {
         // SIGNUP =================================
         // show the signup form
         app.get('/signup', function(req, res) {
-            console.log(req);
+            console.log(req.body);
             res.render('signup.ejs', { message: req.flash('signupMessage') });
         });
 
