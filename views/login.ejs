@@ -4,9 +4,17 @@
     <title>IOSD Web Portal</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link href="assets/css/toolkit.css" rel="stylesheet">
+	<link href="assets/css/application.css" rel="stylesheet">
+	
     <style>
        html {
 	height: 100%;
+           body {
+    
+    background-color: #cccccc;
+}
 	/*Image only BG fallback*/
 	
 	/*background = gradient + image pattern combo*/
@@ -18,8 +26,60 @@
         body         { padding-top:80px; }
     </style>
 </head>
-<body>
-<div class="container">
+<body style="background-image: url('http://wallpapercave.com/wp/65thfiw.png');">
+
+   <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="http://www.iosd.tech">
+					<img src="assets/img/IOSD-logo.png" alt="brand">
+				</a>
+			</div>
+			<div class="navbar-collapse collapse" id="navbar-collapse-main">
+				
+				<ul class="nav navbar-nav hidden-xs">
+					<li >
+						<a href="http://www.iosd.tech">Main Site</a>
+					</li>
+					<li >
+						<a href="/signup">Signup</a>
+					</li>
+					<li class="active">
+						<a href="/login">Login</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+					<li>
+						<button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
+							<!-- <img class="img-circle" src="assets/img/avatar-dhg.png"> -->
+						</button>
+					</li>
+				</ul>
+				
+				<ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+					<li><a href="http://www.iosd.tech">Main Site</a></li>
+					
+					
+					<li><a href="#">Sign Up</a></li>
+					<li><a href="/login"></a>Login</li>
+				</ul>
+				
+				<ul class="nav navbar-nav hidden">
+					<li><a href="/login">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+    
+    
+    <div class="container">
 <div class="col-sm-6 col-sm-offset-3">
 
     <h1><span class="fa fa-sign-in"></span> Login</h1>
@@ -39,13 +99,13 @@
             <input type="password" class="form-control" name="password">
         </div>
 
-        <button type="submit" class="btn btn-warning btn-lg">Login</button>
+        <button type="submit" class="btn btn-lg">Login</button>
     </form>
 
     <hr>
 
-    <p>Need an account? <a href="/signup">Signup</a></p>
-    <p>Or go <a href="http://www.iosd.tech">Home</a>.</p>
+    <p><strong>Need an account?</strong> <a href="/signup" style="color:black; font-weight:300;">Signup</a></p>
+    <p><strong>Or go </strong><a href="http://www.iosd.tech" style="color:black; font-weight:300;">Home</a>.</p>
 
 
 </div>
