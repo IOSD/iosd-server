@@ -24,7 +24,7 @@
     
     <!-- All CSS Plugins -->
     <link rel="stylesheet" type="text/css" href="css/plugin.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     
     <!-- Main CSS Stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -91,10 +91,10 @@
                         </div> 
                        
                        <ul class="social-icon">
-                         <li><a href="#" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                         <li><a href="#" target="_blank" class="github"><i class="fa fa-github"></i></a></li>
+                         <li><a href="https://www.facebook.com/iosddtu/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a href="https://twitter.com/iosoftwared" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                         <li><a href="https://in.linkedin.com/company/iosd" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                         <li><a href="https://github.com/IOSD" target="_blank" class="github"><i class="fa fa-github"></i></a></li>
                         </ul>
 
                     </div>
@@ -112,7 +112,7 @@
                     		
                             
                             <div class="sub-title">
-                           		<a href="dashboard" title="Go to Home Page"><h2>Back Home</h2></a>
+                           		<a href="http://localhost:3000/dashboard" title="Go to Home Page"><h2>Back Home</h2></a>
                                 <a href="#comment" class="smoth-scroll"><i class="icon-bubbles"></i></a>
                              </div>
                             
@@ -122,7 +122,7 @@
                             	
                                 
                                 <!-- Post Headline Start -->
-                                <div class="post-title">
+                                <div class="post-title" id="1">
                                     <h1>Ingredients in the making of a Data Scientist</h1> 
                                    </div>
                                    <!-- Post Headline End -->
@@ -200,7 +200,7 @@ Be a unicorn!
                                   </p><br><br><hr><br>
                                   
                                   <!-- Post Headline Start -->
-                                <div class="post-title">
+                                <div class="post-title" id="2">
                                     <h1>Text Classification and Sentiment Analysis : Introduction</h1> 
                                    </div>
                                    <!-- Post Headline End -->
@@ -265,32 +265,7 @@ The contents of this blog series is as follows:
                                    </div>
                                 
                                  </div>
-                                 <!-- Post Image Gallery End -->
-                                
-                                
-                                   
-                                   
-                                  
-                                  
-                                
-                                  
-                                  
-                                  
-                                  <!-- Post Author Bio Box Start -->
-                                  <div class="about-author margin-top-70 margin-bottom-50">
-                                    
-                                    <div class="picture">
-                                      <img src="images/blog/author.png" class="img-responsive" alt="">
-                                     </div>
-                                   
-                                    <div class="c-padding">
-                                       <h3>Article By <a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Visit Alex Website">Alex Parker</a></h3>
-                                       <p>You can use about author box when someone guest post on your blog, Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ad minim veniam.</p>
-                                      </div>
-                                    </div>
-                                    <!-- Post Author Bio Box End -->
-                                    
-                                    
+                                 <!-- Post Image Gallery End -->  
                                     
                                     
                                   <!-- You May Also Like Start -->
@@ -299,17 +274,13 @@ The contents of this blog series is as follows:
                                      <div class="row">
                                  
                                     <div class="col-md-4 col-sm-6 col-xs-12">
-                                      <a href="single.html"><p>Make mailchimp singup form working with ajax using jquery plugin</p></a>
+                                      <a href="single.html#1"><p>Ingredients in the making of a Data Scientist</p></a>
                                      </div>
                     
                                     <div class="col-md-4 col-sm-6 col-xs-12">
-                                      <a href="single.html"><p>How to design elegant e-mail newsletter in html for wish christmas to your subscribers?</p></a>
+                                      <a href="single.html#2"><p>Text Classification and Sentiment Analysis : Introduction</p></a>
                                      </div>
-                    
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                      <a href="single.html"><p>How to customize a wordpress theme entirely from scratch using a child theme?</p></a>
-                                     </div>
-                                    
+                     
                                     </div>
                                   </div>
                                   <!-- You May Also Like End -->
@@ -351,7 +322,7 @@ The contents of this blog series is as follows:
                        <div class="col-md-12 page-body margin-top-50 footer">
                           <footer>
                           <ul class="menu-link">
-                               <li><a href="../views/dashboard.ejs">Home</a></li>
+                               <li><a href="http://localhost:3000/dashboard">Home</a></li>
                                <li><a href="http://www.iosd.tech#about">About</a></li>
                                <li><a href="http://www.iosd.tech#projects">Work</a></li>
                                <li><a href="http://www.iosd.tech#contact">Contact</a></li>
@@ -382,8 +353,8 @@ The contents of this blog series is as follows:
      
      <!-- Endpage Box (Popup When Scroll Down) Start -->
      <div id="scroll-down-popup" class="endpage-box">
-       <h4>Read Also</h4>
-       <a href="#">How to make your company website based on bootstrap framework...</a>
+       <h4>Does Data Science look like a promising path?</h4>
+       <a href="../static/profile/index.html">Checkout The Library for some Amazing Resources.</a>
       </div>
       <!-- Endpage Box (Popup When Scroll Down) End -->
       
