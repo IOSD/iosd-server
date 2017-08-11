@@ -1,6 +1,7 @@
 var path = require('path');
 var eventsdata = require('./demodata');
 var Event = require('./models/event');
+var Book = require('./models/book');
 // var pdfGen = require('./../pdf.js');
 var idcard = require('./png');
 var fs = require('fs');
@@ -76,7 +77,9 @@ module.exports = function(app, passport) {
         }
     });
 
-
+    app.get('/library'  , function(req ,res){
+        res.render('library', {});
+    });
 
     // PROFILE SECTION =========================
     app.get('/dashboard', isLoggedIn, function(req, res) {
