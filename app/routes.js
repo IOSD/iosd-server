@@ -18,7 +18,7 @@ module.exports = function(app, passport) {
     // Events Routes
     
     app.get('/events' , function(req, res) {
-        res.sendfile('static/events.html');
+        res.render('events');
     });
 
     app.get('/events-admin' , function(req, res) {
@@ -47,6 +47,7 @@ module.exports = function(app, passport) {
         if(college == 'search'){
             Event.find().then(function(data) {
                 di = {}
+                // console.log(data);
                 data.forEach(function(item) {
                     di[item.college] = item.college_name
                 })
