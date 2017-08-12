@@ -1,7 +1,7 @@
 var path = require('path');
 var eventsdata = require('./demodata');
 var Event = require('./models/event');
-var Book = require('./models/book');
+var Books = require('./models/book');
 // var pdfGen = require('./../pdf.js');
 var idcard = require('./png');
 var fs = require('fs');
@@ -81,8 +81,33 @@ module.exports = function(app, passport) {
         res.render('library', {});
     });
 
-    app.get('/library-admin'  , function(req ,res){
-        res.render('library-admin', {});
+    app.get('/library-admin'  , isLoggedIn  , function(req ,res){
+        Books.find().then(function(data) {    
+            console.log(data);
+            console.log({user : req.user , books : data});
+            res.render('libraryAdmin', {user : req.user , books : data});
+        } , function(err) {
+            console.log('Err');
+            console.log(err);
+        });
+        // res.render('libraryAdmin', {user : req.user , });
+    });
+
+    app.get('/addbook'  , isLoggedIn ,function(req ,res){
+        res.render('newBook', {user : req.user});
+    });
+
+    app.post('/addbook'  , function(req ,res){
+        // res
+        console.log(req.body);
+        Book.create(req.body , function(err  , result) {
+            if (err) {
+                console.log(err) ;
+                return 
+            } 
+            console.log(result);
+            res.send(result);
+        })
     });
 
     // PROFILE SECTION =========================
