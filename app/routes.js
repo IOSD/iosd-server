@@ -18,7 +18,7 @@ module.exports = function(app, passport) {
     // Events Routes
     
     app.get('/events' , function(req, res) {
-        res.sendfile('static/events.html');
+        res.render('events');
     });
 
     app.get('/events-admin' , function(req, res) {
@@ -47,6 +47,7 @@ module.exports = function(app, passport) {
         if(college == 'search'){
             Event.find().then(function(data) {
                 di = {}
+                // console.log(data);
                 data.forEach(function(item) {
                     di[item.college] = item.college_name
                 })
@@ -78,7 +79,7 @@ module.exports = function(app, passport) {
     });
 
     app.get('/library'  , function(req ,res){
-        res.render('library', {});
+        res.render('library', {user: req.user});
     });
 
     app.get('/library-admin'  , isLoggedIn  , function(req ,res){
@@ -93,10 +94,18 @@ module.exports = function(app, passport) {
         // res.render('libraryAdmin', {user : req.user , });
     });
 
+    app.get('/books/delete/:id' , isLoggedIn ,function(req , res) {
+        var id = req.params.id;
+        Books.find({ _id:id }).remove().exec();
+        console.log(id);
+        res.send('ok');
+    })
+
+
     app.get('/addbook'  , isLoggedIn ,function(req ,res){
         res.render('newBook', {user : req.user});
     });
-
+    
     app.post('/addbook'  , function(req ,res){
         // res
         console.log(req.body);

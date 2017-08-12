@@ -1,34 +1,80 @@
 <!doctype html>
 <html>
 <head>
-    <title>IOSD Web Portal</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<title>IOSD Web Portal</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 	<link href="css/toolkit.css" rel="stylesheet">
 	<link href="css/application.css" rel="stylesheet">
 	
-    <style>
-       html {
-	height: 100%;
-           body {
-    
-    background-color: #cccccc;
-}
-	/*Image only BG fallback*/
-	
-	/*background = gradient + image pattern combo*/
-	/* background:  */
-		/* linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6)); */
- }  
-
-
-        body         { padding-top:80px; }
-    </style>
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+		
+		.login-page {
+			width: 360px;
+			padding: 8% 0 0;
+			margin: auto;
+			margin-top: 4%;
+			vertical-align: middle;
+		}
+		.form {
+			position: relative;
+			z-index: 1;
+			background: #FFFFFF;
+			max-width: 360px;
+			margin: 0 auto 100px;
+			padding: 45px;
+			text-align: center;
+			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+		}
+		.form input {
+			font-family: "Roboto", sans-serif;
+			outline: 0;
+			background: #f2f2f2;
+			width: 100%;
+			border: 0;
+			margin: 0 0 15px;
+			padding: 15px;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+		.form button {
+			font-family: "Roboto", sans-serif;
+			text-transform: uppercase;
+			outline: 0;
+			background: #4CAF50;
+			width: 100%;
+			border: 0;
+			padding: 15px;
+			color: #FFFFFF;
+			font-size: 14px;
+			-webkit-transition: all 0.3 ease;
+			transition: all 0.3 ease;
+			cursor: pointer;
+		}
+		.form button:hover,.form button:active,.form button:focus {
+			background: #43A047;
+		}
+		.form .message {
+			margin: 15px 0 0;
+			color: #b3b3b3;
+			font-size: 12px;
+		}
+		.form .message a {
+			color: #4CAF50;
+			text-decoration: none;
+		}
+		.form .register-form {
+			display: none;
+		}
+		
+		
+	</style>
 </head>
 <body style="background-image: url('images/bg/blue.png');">
-
-   <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
@@ -77,38 +123,24 @@
 		</div>
 	</nav>
 	
-    
-    
-    <div class="container">
-<div class="col-sm-6 col-sm-offset-3">
-
-    <h1><span class="fa fa-sign-in"></span> Login</h1>
-
-    <% if (message.length > 0) { %>
-        <div class="alert alert-danger"><%= message %></div>
-    <% } %>
-
-    <!-- LOGIN FORM -->
-    <form action="/login" method="post">
-        <div class="form-group">
-            <label>Email</label>
-            <input type="text" class="form-control" name="email">
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" name="password">
-        </div>
-
-        <button type="submit" class="btn btn-lg">Login</button>
-    </form>
-
-    <hr>
-
-    <p><strong>Need an account?</strong> <a href="/signup" style="color:black; font-weight:300;">Signup</a></p>
-    <p><strong>Or go </strong><a href="http://www.iosd.tech" style="color:black; font-weight:300;">Home</a>.</p>
-
-
-</div>
-</div>
+	
+	
+	<div class="container">
+		<% if (message.length > 0) { %>
+			<div class="alert alert-danger"><%= message %></div>
+			<% } %>
+		</div>
+	</div>
+	<div class="login-page">
+		<div class="form">
+			<form class="login-form" method="post" action="/login">
+				<input type="text" placeholder="Email" name='email' />
+				<input type="password" placeholder="Password" name='password' />
+				<button>login</button>
+				<p class="message">Not registered? <a href="/signup">Create an account</a></p>
+			</form>
+		</div>
+	</div>
 </body>
+<script src='/js/jquery.min.js'></script>
 </html>
