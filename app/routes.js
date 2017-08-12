@@ -93,10 +93,18 @@ module.exports = function(app, passport) {
         // res.render('libraryAdmin', {user : req.user , });
     });
 
+    app.get('/books/delete/:id' , isLoggedIn ,function(req , res) {
+        var id = req.params.id;
+        Books.find({ _id:id }).remove().exec();
+        console.log(id);
+        res.send('ok');
+    })
+
+
     app.get('/addbook'  , isLoggedIn ,function(req ,res){
         res.render('newBook', {user : req.user});
     });
-
+    
     app.post('/addbook'  , function(req ,res){
         // res
         console.log(req.body);
