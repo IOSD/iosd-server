@@ -1,0 +1,10 @@
+table.table{
+  /* margin : 20px; */
+  width: 95% ;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.invisble {
+  display: none;
+}

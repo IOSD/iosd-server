@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Admin</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="text-center">
+            <h1>Admin For Library</h1>
+            <button id='getBooks' class="btn btn-primary">Get Books</button>
+            <button id='addBook' class="btn btn-primary">Add Book</button>
+        </div>
+        <div class="books-table invisible">
+            <table class="table">
+                <thead class="table-inverse">
+                    <tr>
+                        <th>Name</th>
+                        <th>Author</th>
+                        <th>Year</th>
+                        <th>Description</th>
+                        <th>Cover</th>
+                        <th>Link</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody contenteditable>
+                    <tr class="invisible">
+                        <td>Name</td>
+                        <td>Author</td>
+                        <td>Year</td>
+                        <td>Description</td>
+                        <td>Cover</td>
+                        <td>Link</td>
+                        <td>Category</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script src='/js/jquery.min.js'></script>
+        <script src='index.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+    </body>
+</html>

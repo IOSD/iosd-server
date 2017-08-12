@@ -81,6 +81,10 @@ module.exports = function(app, passport) {
         res.render('library', {});
     });
 
+    app.get('/library-admin'  , function(req ,res){
+        res.render('library-admin', {});
+    });
+
     // PROFILE SECTION =========================
     app.get('/dashboard', isLoggedIn, function(req, res) {
         idcard.topng('DhruvRamdev' , '2016' ,'base64' ,function(data){
