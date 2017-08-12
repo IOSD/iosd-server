@@ -16,7 +16,7 @@ var userSchema = mongoose.Schema({
     picture: String ,
     isAdmin:Boolean,
     name:String , 
-    joinDate : { type:String , default : function() {  return moment().format('DD-MM-YYYY'); } }
+    joinDate : { type:String , default :moment().format('DD-MM-YYYY') }
 
 });
 
