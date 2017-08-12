@@ -79,7 +79,7 @@ module.exports = function(app, passport) {
     });
 
     app.get('/library'  , function(req ,res){
-        res.render('library', {});
+        res.render('library', {user: req.user});
     });
 
     app.get('/library-admin'  , isLoggedIn  , function(req ,res){
