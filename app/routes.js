@@ -117,6 +117,27 @@ module.exports = function(app, passport) {
         res.send('ok');
     })
 
+    app.get('/books/:id' , isLoggedIn ,function(req , res) {
+        var id = req.params.id;
+        console.log(id);
+        Books.find({ _id:id }).then(function(data){
+            res.render('Book' , { 'book' : data[0] , user : req.user})
+        } , function (err) {
+
+        });
+    })
+
+    app.post('/books/:id' , isLoggedIn ,function(req , res) {
+        var id = req.params.id;
+        console.log(id);
+        console.log(req.body);
+        Books.update({ _id: id }, req.body ).then(function(data){
+            res.send(data);
+        } , function (err) {
+            console.error(err);
+        });
+    })
+
 
     app.get('/addbook'  , isLoggedIn ,function(req ,res){
         res.render('newBook', {user : req.user});

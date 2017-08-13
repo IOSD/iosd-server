@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IOSD</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href="/css/toolkit.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/application.css" rel="stylesheet">
+
+    </head>
+    <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="/images/dashboard/IOSD-logo.png" alt="brand">
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-collapse-main">
+
+        <ul class="nav navbar-nav hidden-xs">
+          <li class="active">
+            <a href="#">Dashboard</a>
+          </li>
+          <li>
+            <a href="profile/index.html">Library</a>
+          </li>
+          <li>
+            <a href="single.html">Blogs</a>
+          </li>
+          <li>
+            <a href="#">Video Tutorials</a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+          <!-- <li >
+            <a class="app-notifications" href="notifications/index.html">
+              <span class="icon icon-bell"></span>
+            </a>
+          </li> -->
+          <li>
+            <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
+              <img class="img-circle" src="<%=user.picture%>">
+            </button>
+          </li>
+        </ul>
+        
+        <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="profile/index.html">Library</a></li>
+          <li><a href="single.html">Blog</a></li>
+          <li><a href="#" data-action="growl">Video Tutorials</a></li>
+          <li><a href="login">Logout</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav hidden">
+          <li><a href="login">Logout</a></li>
+        </ul>
+      </div>
+  </div>
+</nav>
+<hr><hr>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Add a New Book</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/books/<%= book._id %>" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="Name" value="<%=book.name%>" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="author" placeholder="Author" value="<%=book.author%>" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="year" placeholder="Year" value="<%=book.year%>" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" type="textarea" name="description" placeholder="Description" required><%=book.description%></textarea>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="Image" value="<%=book.image%>"required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="link" placeholder="Link" value="<%=book.link%>" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="category" placeholder="Category" value="<%=book.category%>" required>
+                </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" name="color" placeholder="Background Color Matching to Book in Hex" value="<%=book.color%>" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/library-admin">Go Back</a>
+        </div>
+    </div>
+</div>
+    </body>
+</html>
