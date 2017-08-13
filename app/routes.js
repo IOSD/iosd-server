@@ -78,8 +78,24 @@ module.exports = function(app, passport) {
         }
     });
 
-    app.get('/library'  , function(req ,res){
-        res.render('library', {user: req.user});
+    app.get('/library' , isLoggedIn , function(req ,res){
+        Books.find().then(function(data) {    
+            console.log(data);
+            // console.log({user : req.user , books : data});
+            var category  = []
+            data.forEach((book) => {
+                console.log('book');
+                if ( category.indexOf(book.category) == -1 ) {
+                    category.push(book.category);
+                }
+            })
+            console.log(category);
+            res.render('library', {user : req.user , books : data , categories : category});
+        } , function(err) {
+            console.log('Err');
+            console.log(err);
+        });
+        // res.render('library', {user: req.user});
     });
 
     app.get('/library-admin'  , isLoggedIn  , function(req ,res){
@@ -109,7 +125,7 @@ module.exports = function(app, passport) {
     app.post('/addbook'  , function(req ,res){
         // res
         console.log(req.body);
-        Book.create(req.body , function(err  , result) {
+        Books.create(req.body , function(err  , result) {
             if (err) {
                 console.log(err) ;
                 return 

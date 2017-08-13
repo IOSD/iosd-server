@@ -9,7 +9,8 @@ var eventScheme = mongoose.Schema({
     description : String ,
     image : String ,
     link : String , 
-    category : String
+    category : String , 
+    color : String
 });
 
 // create the model for Evetns and expose it to our app
