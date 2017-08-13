@@ -17,12 +17,12 @@ module.exports = function(app, passport) {
 
     // Events Routes
     
-    app.get('/events' , function(req, res) {
-        res.render('events');
+    app.get('/events' ,isLoggedIn ,  function(req, res) {
+        res.render('events' , {user : req.user});
     });
 
     app.get('/events-admin' , function(req, res) {
-        res.sendfile('static/event-admin/index.html');
+        res.render('event-admin');
     });
 
     app.post('/events-admin' , function(req, res) {
