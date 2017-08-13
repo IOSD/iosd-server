@@ -15,6 +15,13 @@ module.exports = function(app, passport) {
         res.render('index.ejs');
     });
 
+    
+    app.get('/admin', isLoggedIn , function(req, res) {
+        res.render('admin' , {user : req.user} );
+    });
+
+    
+
     // Events Routes
     
     app.get('/events' ,isLoggedIn ,  function(req, res) {

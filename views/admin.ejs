@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    
+    <title>
+        
+        Home &middot; 
+        
+    </title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href="css/toolkit.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/application.css" rel="stylesheet">
+    
+    <style>
+        /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+        /* this chunk of css is not part of the toolkit :) */
+        body {
+            width: 1px;
+            min-width: 100%;
+            *width: 100%;
+        }
+    </style>
+    
+</head>
+
+
+<body class="with-top-navbar">
+    
+    
+    
+    <div class="growl" id="app-growl"></div>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="images/dashboard/IOSD-logo.png" alt="brand">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-collapse-main">
+                
+                <ul class="nav navbar-nav hidden-xs">
+                    <li class="active">
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/library">Library</a>
+                    </li>
+                    <li>
+                        <a href="/events">Events</a>
+                    </li>
+                    <li>
+                        <a href="single.html">Blogs</a>
+                    </li>
+                    <li>
+                        <a href="#">Video Tutorials</a>
+                    </li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+                    <!-- <li >
+                        <a class="app-notifications" href="notifications/index.html">
+                            <span class="icon icon-bell"></span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
+                            <img class="img-circle" src="<%=user.picture%>">
+                        </button>
+                    </li>
+                </ul>
+                
+                <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="/library">Library</a></li>
+                    <li><a href="/events">Events</a></li>
+                    <li><a href="single.html">Blog</a></li>
+                    <li><a href="#" data-action="growl">Video Tutorials</a></li>
+                    <li><a href="login">Logout</a></li>
+                </ul>
+                
+                <ul class="nav navbar-nav hidden">
+                    <li><a href="login">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Welcome to Admin Panel</h1>
+            <ul>
+                <li><a href="/library-admin">Library Management</a></li>
+                <li><a href="/events-admin">Events Management</a></li>
+            </ul>
+        </div>
+        
+    </div>
+</body>
+</html>
