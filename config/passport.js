@@ -3,9 +3,12 @@ var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 var TwitterStrategy = require('passport-twitter').Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var idcard = require('./../app/png.js');
 
 // load up the user model
 var User = require('../app/models/user');
+
+var placeholder = undefined ;
 
 // load the auth variables
 var configAuth = require('./auth'); // use this one for testing
@@ -29,19 +32,23 @@ module.exports = function (passport) {
     // LOCAL LOGIN =============================================================
     passport.use('local-login', new LocalStrategy({
         // by default, local strategy uses username and password, we will override with email
-        usernameField: 'email',
+        usernameField: 'username',
         passwordField: 'password',
         passReqToCallback: true
     },
-        function (req, email, password, done) {
-            if (email)
-                email = email.toLowerCase(); // Use lower-case e-mails to avoid case-sensitive e-mail matching
+        function (req, username, password, done) {
+            if (username)
+                username = username.toLowerCase(); // Use lower-case e-mails to avoid case-sensitive e-mail matching
 
             // asynchronous
             process.nextTick(function () {
-                User.findOne({ 'email': email }, function (err, user) {
-
+                User.findOne({ 'username': username }, function (err, user) {
+                    
+                    console.log('Login');
                     console.log(user);
+                    console.log(username);
+                    console.log(password);
+
 
                     if (err)
                         return done(err);
@@ -54,8 +61,12 @@ module.exports = function (passport) {
                         return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.'));
 
                     // all is well, return user
-                    else
+                    else {
+                        idcard.topng(user.name , '2017' , user.email ,'file' ,function(filename){
+                            console.log(filename);
+                        });                 
                         return done(null, user);
+                    }
                 });
             });
 
@@ -64,22 +75,22 @@ module.exports = function (passport) {
     // LOCAL SIGNUP ============================================================
     passport.use('local-signup', new LocalStrategy({
         // by default, local strategy uses username and password, we will override with email
-        usernameField: 'email',
+        usernameField: 'username',
         passwordField: 'password',
         passReqToCallback: true
     },
-        function (req, email, password, done) {
+        function (req, username, password, done) {
             console.log('Signup!!');
             console.log(req.body);
             // console.log(email, password, twitter, facebook, linkedin, name, college, phone, done);
-            if (email)
-                email = email.toLowerCase(); // Use lower-case e-mails to avoid case-sensitive e-mail matching
+            if (username)
+                username = username.toLowerCase(); // Use lower-case e-mails to avoid case-sensitive e-mail matching
 
             // asynchronous
             process.nextTick(function () {
                 // if the user is not already logged in:
                 if (!req.user) {
-                    User.findOne({ 'email': email }, function (err, user) {
+                    User.findOne({ 'username': username }, function (err, user) {
                         if (err)
                             return done(err);
 
@@ -91,7 +102,8 @@ module.exports = function (passport) {
                             // create the user
                             var newUser = new User();
 
-                            newUser.email = email;
+                            newUser.email = username ;
+                            newUser.email = req.user.email ;
                             newUser.password = newUser.generateHash(password);
 
                             newUser.twitter = req.body['twitter'] || null;
@@ -101,7 +113,7 @@ module.exports = function (passport) {
                             newUser.name = req.body['name'];
                             newUser.phone = req.body.phone;
                             newUser.college = req.body.college;
-                            newUser.picture = req.body.picture;
+                            newUser.picture = req.body.picture || placeholder ;
 
                             newUser.isAdmin = false;
                             newUser.save(function (err) {

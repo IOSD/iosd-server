@@ -5,7 +5,7 @@ var PDFDocument = require('pdfkit');
 var fs = require('fs');
 
 
-function topng(name , year , type, callback) {
+function topng(name , year ,email ,type, callback) {
 
     Jimp.read(TEMPLATE)
         .then(function (image) {
@@ -28,7 +28,7 @@ function topng(name , year , type, callback) {
                     callback(data);
                 });
             } else if(type=='file') {
-                var fileName = `media/output.png` ;
+                var fileName = `media/${email}.png` ;
                 loadedImage.write(fileName);
                 // console.log(fileName);
                 callback(fileName);

@@ -38,37 +38,46 @@
   
   <div class="growl" id="app-growl"></div>
   
-  <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/dashboard">
-          <img src="/images/dashboard/IOSD-logo.png" alt="brand">
-        </a>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar-collapse-main">
-        
+  
+<nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="images/dashboard/IOSD-logo.png" alt="brand">
+      </a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-collapse-main">
+
         <ul class="nav navbar-nav hidden-xs">
-          <li >
+          <li>
             <a href="/dashboard">Dashboard</a>
           </li>
-          <li class="active">
+          <li>
             <a href="/library">Library</a>
           </li>
-          <li>
-            <a href="/single.html">Blogs</a>
+          <li class="active">
+            <a href="/events">Events</a>
           </li>
           <li>
-            <a href="docs/index.html">Video Tutorials</a>
+            <a href="/blog">Blogs</a>
+          </li>
+          <li>
+            <a href="#">Video Tutorials</a>
           </li>
         </ul>
-        
+
         <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+          <!-- <li >
+            <a class="app-notifications" href="notifications/index.html">
+              <span class="icon icon-bell"></span>
+            </a>
+          </li> -->
           <li>
             <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover">
               <img class="img-circle" src="<%=user.picture%>">
@@ -78,16 +87,20 @@
         
         <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
           <li><a href="/dashboard">Dashboard</a></li>
-          <li><a href="#">Library</a></li>
-          <li><a href="../single.html">Blog</a></li>
+          <li><a href="/library">Library</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="single.html">Blog</a></li>
           <li><a href="#" data-action="growl">Video Tutorials</a></li>
-          <li><a href="/login">Logout</a></li>
+          <li><a href="login">Logout</a></li>
         </ul>
-        
+
+        <ul class="nav navbar-nav hidden">
+          <li><a href="login">Logout</a></li>
+        </ul>
       </div>
-    </div>
-  </nav>
-  
+  </div>
+</nav>
+
   <div id="main-container" class="main-container nav-effect-1">
     
     <div class="main clearfix">
@@ -143,7 +156,7 @@
                     <h3 class="book-item_title"><%=book.name%></h3>
                     <p class="author">by <%=book.author%> &bull; <%=book.year%></p>
                     <p><%=book.description.substring(0,100);%></p>
-                    <a href="#" class="button ">Details</a>
+                    <a href="#" class="button">Details</a>
                   </div>
                   
                   <div class="overlay-details">
@@ -162,76 +175,16 @@
                     
                   </div>
                 </li><% }); %>
-                <li class="book-item small-12 medium-6 columns" data-groups='["classic","young"]' data-date-created='1951' data-title='The Catcher in the Rye' data-color='#009c8b'>
-                  <div class="bk-img">
-                    <div class="bk-wrapper">
-                      <div class="bk-book bk-bookdefault">
-                        <div class="bk-front">
-                          <div class="bk-cover" style="background-image: url('http://interactivejoe.com/book-viewer/assets/images/bk_2-small.jpg')"></div>
-                        </div>
-                        <div class="bk-back"></div>
-                        <div class="bk-left"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item-details">
-                    <h3 class="book-item_title">The Catcher in the Rye</h3>
-                    <p class="author">by J.D. Salinger &bull; 1951</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tellus nisi, eget pulvinar in, molestie et arcu.</p>
-                    <a href="#" class="button ">Details</a>
-                  </div>
-                  
-                  <div class="overlay-details">
-                    <a href="#" class="close-overlay-btn">Close</a>
-                    <div class="overlay-image">
-                      <img src="http://interactivejoe.com/book-viewer/assets/images/bk_2-large.jpg" alt="Book Cover">
-                      <div class="back-color"></div>
-                    </div>
-                    <div class="overlay-desc activated">
-                      <h2 class="overlay_title">The Catcher in the Rye</h2>
-                      <p class="author">by J.D. Salinger</p>
-                      <p class="published">1951</p>
-                      <p class="synopsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus convallis sem. Nunc sed tristique augue. Aenean at nulla vel lacus volutpat bibendum vitae ut nibh. Aliquam eu metus et purus rutrum malesuada. Aenean in auctor mauris,
-                        non vulputate libero. Nullam auctor, purus ut cursus convallis, lectus tellus dignissim lectus, id tempor ipsum leo ut nulla. Vestibulum vitae elit erat.</p>
-                        <a href="#" class="button preview">Preview</a>
-                      </div>
-                      <div class="overlay-preview">
-                        <a href="#" class="back-preview-btn">Back</a>
-                        <h4 class="preview-title">Preview</h4>
-                        <div class="preview-content">
-                          <h5>Chapter 1</h5>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus convallis sem. Nunc sed tristique augue. Aenean at nulla vel lacus volutpat bibendum vitae ut nibh. Aliquam eu metus et purus rutrum malesuada. Aenean in auctor
-                            mauris, non vulputate libero. Nullam auctor, purus ut cursus convallis, lectus tellus dignissim lectus, id tempor ipsum leo ut nulla. Vestibulum vitae elit erat.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus convallis sem. Nunc sed tristique augue. Aenean at nulla vel lacus volutpat bibendum vitae ut nibh. Aliquam eu metus et purus rutrum malesuada. Aenean in auctor
-                              mauris, non vulputate libero. Nullam auctor, purus ut cursus convallis, lectus tellus dignissim lectus, id tempor ipsum leo ut nulla. Vestibulum vitae elit erat.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus convallis sem. Nunc sed tristique augue. Aenean at nulla vel lacus volutpat bibendum vitae ut nibh. Aliquam eu metus et purus rutrum malesuada. Aenean in auctor
-                                mauris, non vulputate libero. Nullam auctor, purus ut cursus convallis, lectus tellus dignissim lectus, id tempor ipsum leo ut nulla. Vestibulum vitae elit erat.<br>&nbsp;<br>&nbsp;</p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        
-                      </div>
-                      <!-- /main-container -->
-                      <div class="main-overlay">
-                        <div class="overlay-full"></div>
-                      </div>
-                    </div>
-                  </li>
                 </ul>
               </div>
             </section>
           </div>
         </div>
-      </div>
-      <div class="footer" style="background-color:black;">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12" style="text-align: center">
-              <p style="color:white; padding-top:5px;">Made with <i class="fa fa-heart pulse"></i>  by International Organisation of Software Developers</p>
-            </div>
-          </div>
-        </div>
+
+  <div class="main-overlay">
+    <div class="overlay-full"></div>
+  </div>
+
       </div>
       <script src="../js/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.js"></script> 

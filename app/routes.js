@@ -16,8 +16,12 @@ module.exports = function(app, passport) {
     });
 
     
-    app.get('/admin', isLoggedIn , function(req, res) {
+    app.get('/admin', isLoggedIn , isAdmin, function(req, res) {
         res.render('admin' , {user : req.user} );
+    });
+
+    app.get('/blog', isLoggedIn , function(req, res) {
+        res.render('blog' , {user : req.user} );
     });
 
     
@@ -28,11 +32,11 @@ module.exports = function(app, passport) {
         res.render('events' , {user : req.user});
     });
 
-    app.get('/events-admin' , function(req, res) {
+    app.get('/events-admin' , isLoggedIn , isAdmin , function(req, res) {
         res.render('event-admin');
     });
 
-    app.post('/events-admin' , function(req, res) {
+    app.post('/events-admin'  , isAdmin , function(req, res) {
         console.log(req.body);
         // require('./enterdata');
         Event.update( { college : req.body.college }, req.body, { upsert : true }).then(function(doc) {
@@ -105,7 +109,7 @@ module.exports = function(app, passport) {
         // res.render('library', {user: req.user});
     });
 
-    app.get('/library-admin'  , isLoggedIn  , function(req ,res){
+    app.get('/library-admin'  ,isAdmin ,  isLoggedIn  , function(req ,res){
         Books.find().then(function(data) {    
             console.log(data);
             console.log({user : req.user , books : data});
@@ -117,14 +121,14 @@ module.exports = function(app, passport) {
         // res.render('libraryAdmin', {user : req.user , });
     });
 
-    app.get('/books/delete/:id' , isLoggedIn ,function(req , res) {
+    app.get('/books/delete/:id' , isLoggedIn  , isAdmin,function(req , res) {
         var id = req.params.id;
         Books.find({ _id:id }).remove().exec();
         console.log(id);
         res.send('ok');
     })
 
-    app.get('/books/:id' , isLoggedIn ,function(req , res) {
+    app.get('/books/:id' , isLoggedIn  ,isAdmin ,function(req , res) {
         var id = req.params.id;
         console.log(id);
         Books.find({ _id:id }).then(function(data){
@@ -134,7 +138,7 @@ module.exports = function(app, passport) {
         });
     })
 
-    app.post('/books/:id' , isLoggedIn ,function(req , res) {
+    app.post('/books/:id' , isLoggedIn  , isAdmin,function(req , res) {
         var id = req.params.id;
         console.log(id);
         console.log(req.body);
@@ -146,11 +150,11 @@ module.exports = function(app, passport) {
     })
 
 
-    app.get('/addbook'  , isLoggedIn ,function(req ,res){
+    app.get('/book/new'  , isLoggedIn , isAdmin ,function(req ,res){
         res.render('newBook', {user : req.user});
     });
     
-    app.post('/addbook'  , function(req ,res){
+    app.post('/book/new', isLoggedIn , isAdmin , function(req ,res){
         // res
         console.log(req.body);
         Books.create(req.body , function(err  , result) {
@@ -165,13 +169,17 @@ module.exports = function(app, passport) {
 
     // PROFILE SECTION =========================
     app.get('/dashboard', isLoggedIn, function(req, res) {
-        idcard.topng('DhruvRamdev' , '2016' ,'base64' ,function(data){
-            // console.log(data);
-            res.render('dashboard', {
-                user : req.user , 
-                idcard : data
-            });
-        });   
+
+        // idcard.topng(req.user.name , '2017' , req.user.email ,'file' ,function(filename){
+        //     console.log(filename);
+        // }); 
+
+        var filenameexpected = `/${req.user.email}.png` ;
+        res.render('dashboard', {
+            user : req.user , 
+            idcard : filenameexpected
+        });
+  
     });
 
     app.post('/profile/pdf',function(req,res){
@@ -399,5 +407,13 @@ function isLoggedIn(req, res, next) {
         return next();
 
     res.redirect('/');
+}
+
+function isAdmin(req, res, next) {
+
+    if (req.user.isAdmin)
+        return next();
+
+    res.redirect('/dashboard');
 }
 
