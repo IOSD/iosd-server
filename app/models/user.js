@@ -5,6 +5,7 @@ var moment = require('moment');
 
 // define the schema for our user model
 var userSchema = mongoose.Schema({
+    username : String ,
     email : String,
     password : String,
     twitter: String,
