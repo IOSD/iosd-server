@@ -20,6 +20,10 @@ module.exports = function(app, passport) {
         res.render('admin' , {user : req.user} );
     });
 
+    app.get('/blog', isLoggedIn , function(req, res) {
+        res.render('blog' , {user : req.user} );
+    });
+
     
 
     // Events Routes
@@ -165,7 +169,7 @@ module.exports = function(app, passport) {
 
     // PROFILE SECTION =========================
     app.get('/dashboard', isLoggedIn, function(req, res) {
-        idcard.topng('DhruvRamdev' , '2016' ,'base64' ,function(data){
+        idcard.topng(req.user.name , '2017' ,'base64' ,function(data){
             // console.log(data);
             res.render('dashboard', {
                 user : req.user , 
