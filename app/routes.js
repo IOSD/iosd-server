@@ -169,13 +169,17 @@ module.exports = function(app, passport) {
 
     // PROFILE SECTION =========================
     app.get('/dashboard', isLoggedIn, function(req, res) {
-        idcard.topng(req.user.name , '2017' ,'base64' ,function(data){
-            // console.log(data);
-            res.render('dashboard', {
-                user : req.user , 
-                idcard : data
-            });
-        });   
+
+        // idcard.topng(req.user.name , '2017' , req.user.email ,'file' ,function(filename){
+        //     console.log(filename);
+        // }); 
+
+        var filenameexpected = `/${req.user.email}.png` ;
+        res.render('dashboard', {
+            user : req.user , 
+            idcard : filenameexpected
+        });
+  
     });
 
     app.post('/profile/pdf',function(req,res){

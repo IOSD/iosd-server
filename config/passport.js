@@ -3,6 +3,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 var TwitterStrategy = require('passport-twitter').Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var idcard = require('./../app/png.js');
 
 // load up the user model
 var User = require('../app/models/user');
@@ -54,8 +55,12 @@ module.exports = function (passport) {
                         return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.'));
 
                     // all is well, return user
-                    else
+                    else {
+                        idcard.topng(user.name , '2017' , user.email ,'file' ,function(filename){
+                            console.log(filename);
+                        });                 
                         return done(null, user);
+                    }
                 });
             });
 
