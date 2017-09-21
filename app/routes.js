@@ -52,6 +52,11 @@ module.exports = function(app, passport) {
         })
     });
 
+    app.get('/videos'  , isLoggedIn, function(req, res) {
+        res.render('video' , {user : req.user});
+    });
+
+    
     app.get('/getevents/:college' , function(req, res) {
         var college = req.params.college
         console.log(college);
