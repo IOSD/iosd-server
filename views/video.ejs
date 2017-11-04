@@ -1,29 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IOSD</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href="css/toolkit.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/application.css" rel="stylesheet">
 
-<!doctype html>
-<html class="no-js" lang="en">
-  <head> 
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="author" content="">
-  
-  <title>
-    
-    Video Tutorials 
-    
-  </title>
-  
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-  <link href="css/toolkit.css" rel="stylesheet">
-  <link href="css/stylelib.css" rel="stylesheet">
-  <link href="css/application.css" rel="stylesheet">
-  <link href="css/library.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css">
-  
-  	<style type="text/css">
+    <style type="text/css">
 
   		body {
   			margin: 30px;
@@ -45,13 +31,6 @@
   			padding: 20px 0;
   		}
 
-  		#container1 {
-  			width: 100%;
-  			max-width: 854px;
-  			min-width: 440px;
-  			background: #fff;
-  			margin: 0 auto;
-  		}
 
 
   		/*  VIDEO PLAYER CONTAINER
@@ -85,7 +64,7 @@
 		}
 
 		.vid-list {
-			width: 800px;
+			width: 12000px;
 			position: relative;
 			top:0;
 			left: 0;
@@ -105,6 +84,14 @@
 			overflow:hidden;
 			height: 84px;
 		}
+        .containera {
+  			width: 100%;
+  			max-width: 854px;
+  			min-width: 440px;
+  			background: #fff;
+  			margin: 0 auto;
+  		}
+
 
 		.thumb img {
 			width: 100%;
@@ -191,11 +178,10 @@
 
   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-
-  </head>
-
-  <body>
-      <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+    </head>
+    
+    <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
@@ -211,19 +197,17 @@
     <div class="navbar-collapse collapse" id="navbar-collapse-main">
 
         <ul class="nav navbar-nav hidden-xs">
-          <li >
+          <li class="active">
             <a href="/dashboard">Dashboard</a>
           </li>
           <li>
             <a href="/library">Library</a>
           </li>
-          <li>
-            <a href="/events">Events</a>
-          </li>
+            <li><a href="/events">Events</a></li>
           <li>
             <a href="/blog">Blogs</a>
           </li>
-          <li class="active">
+          <li>
             <a href="#">Video Tutorials</a>
           </li>
         </ul>
@@ -242,11 +226,11 @@
         </ul>
         
         <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
-          <li><a href="#">Dashboard</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
           <li><a href="/library">Library</a></li>
           <li><a href="/events">Events</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="#">Video Tutorials</a></li>
+            <li><a href="/blog">Blog</a></li>
+          <li><a href="#" data-action="growl">Video Tutorials</a></li>
           <li><a href="login">Logout</a></li>
         </ul>
 
@@ -256,13 +240,10 @@
       </div>
   </div>
 </nav>
-<br>
-<br>
+<hr><hr>
+        <div class="title"><h2>Android Tutorials</h2></div>
 
-      
-  	<div class="title"><h2>Android Tutorials</h2></div>
-
-  	<div id="container1">
+  	<div class="containera">
 
   		<!-- THE YOUTUBE PLAYER -->
   		<div class="vid-container">
@@ -273,31 +254,379 @@
 		<div class="vid-list-container">
 	        <div class="vid-list">
 	         	
- 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/czVg0G91-LfWMPOag.html'">
- 	              <div class="thumb"><img src="images/dashboard/android-logo.png"></div>
- 	              <div class="desc">01 - Installing Android Studio</div>
- 	            </div>
- 	          
- 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/kkAIdnRf-LfWMPOag.html'">
- 	              <div class="thumb"><img src="images/dashboard/android-logo.png"></div>
- 	              <div class="desc">02 - Hello World Application</div>
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/wA6saVjt-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/01.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
  	            </div>
 
- 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/U3jFoFHb-LfWMPOag.html'">
- 	              <div class="thumb"><img src="images/dashboard/android-logo.png"></div>
- 	              <div class="desc">03 - Creating Simple User Interface</div>
+                     <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/Rb0UVVMt-GWotTI9K.html'">
+ 	              <div class="thumb"><img src="thumbnails/2.jpg"></div>
+ 	              <div class="desc">Installing and Configure Android Studio</div>
  	            </div>
 
- 	            <!--<div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/fB8UTheTR7s?autoplay=1&rel=0&showinfo=0&autohide=1'">
- 	              <div class="thumb"><img src="images/dashboard/android-logo.png"></div>
- 	              <div class="desc">Sleepy Man Banjo Boys: Bluegrass</div>
+                    <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/ZVHWBUe6-AmF8jZz7.js'">
+ 	              <div class="thumb"><img src="thumbnails/03.jpg"></div>
+ 	              <div class="desc">Hello World Application</div>
  	            </div>
 
- 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/0SNhAKyXtC8?autoplay=1&rel=0&showinfo=0&autohide=1'">
- 	              <div class="thumb"><img src="http://img.youtube.com/vi/0SNhAKyXtC8/0.jpg"></div>
- 	              <div class="desc">Edmar Castaneda: NPR Music Tiny Desk Concert</div>
+                    <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/lVdgm54j-AmF8jZz7.js'">
+ 	              <div class="thumb"><img src="thumbnails/04.jpg"></div>
+ 	              <div class="desc">Working with Multiple Activities</div>
+ 	            </div>
+                    
+                    <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/O45ZfSIn-AmF8jZz7.js'">
+ 	              <div class="thumb"><img src="thumbnails/05.jpg"></div>
+ 	              <div class="desc">Create a simple user interface</div>
+ 	            </div>
+
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/0uDFZmA4-GWotTI9K.html'">
+ 	              <div class="thumb"><img src="thumbnails/6.jpg"></div>
+ 	              <div class="desc">Send Data to an Activity</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/ucIUjoQv-AmF8jZz7.js'">
+ 	              <div class="thumb"><img src="thumbnails/07.jpg"></div>
+ 	              <div class="desc">Input Controls - Buttons</div>
+ 	            </div>
+
+                    <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/k11KCs2g-AmF8jZz7.js'">
+ 	              <div class="thumb"><img src="thumbnails/08.jpg"></div>
+ 	              <div class="desc">Working with Relative Layout</div>
+ 	            </div>
+
+                    <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/Vzvwr6L7-AmF8jZz7.js'">
+ 	              <div class="thumb"><img src="thumbnails/10.jpg"></div>
+ 	              <div class="desc">Respond to a Button Click Events</div>
+ 	            </div>
+
+                    <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/5xqBE77x-AmF8jZz7.js'">
+ 	              <div class="thumb"><img src="thumbnails/12.jpg"></div>
+ 	              <div class="desc">Working with Auto Complete Text View</div>
+ 	            </div>
+
+                    <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/ug6GvJOV-AmF8jZz7.js'">
+ 	              <div class="thumb"><img src="thumbnails/13.jpg"></div>
+ 	              <div class="desc">Working with Checkboxes</div>
+ 	            </div>
+
+                    <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/oukzM9Qe-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/14.jpg"></div>
+ 	              <div class="desc">Working with Radio Buttons</div>
+ 	            </div>
+ 
+                    <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/rSOylo7z-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/15.jpg"></div>
+ 	              <div class="desc">Working with Toggle Button</div>
+ 	            </div>
+
+                    <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/LvadEjhI-AmF8jZz7.js'">
+ 	              <div class="thumb"><img src="thumbnails/17.jpg"></div>
+ 	              <div class="desc">Working with ListView</div>
+ 	            </div>
+
+                    <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/ZZDmCviW-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/19.jpg"></div>
+ 	              <div class="desc">Highlight slected item in a List View</div>
+ 	            </div>
+
+				<!--<div class ="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/xG1yI7Fo-AmF8jZz7.html'">
+ 	            <div class="thumb"><img src="thumbails/20.jpg"></div>
+ 	            <div class="desc">Creating a Time Picker</div>
+				</div>
+-->
+
+				<div class ="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/2GUoA69W-AmF8jZz7.html'">
+ 	            <div class="thumb"><img src="thumbnails/21.jpg"></div>
+ 	            <div class="desc">Creating a Date Picker</div>
+				</div>
+
+
+				<div class ="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/eTpM7O6H-AmF8jZz7.html'">
+ 	            <div class="thumb"><img src="thumbnails/22.jpg"></div>
+ 	            <div class="desc">Working with Options Menu</div>
+				</div>
+
+
+
+				<div class ="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/GqEIC3yV-AmF8jZz7.html'">
+ 	            <div class="thumb"><img src="thumbnails/23.jpg"></div>
+ 	            <div class="desc">Handling Click Events of Options Menu</div>
+				</div>
+
+
+
+				<div class ="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/AMoMM4gr-AmF8jZz7.html'">
+ 	            <div class="thumb"><img src="thumbnails/24.jpg"></div>
+ 	            <div class="desc">Creating a Floating Context Manager</div>
+				</div>
+
+
+				<div class ="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/x7Ui5lK2-AmF8jZz7.html'">
+ 	            <div class="thumb"><img src="thumbnails/25.jpg"></div>
+ 	            <div class="desc">Handling Click Events of Floating Context Manager</div>
+				</div>r
+
+
+				<div class ="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/8R6qI0bR-AmF8jZz7.html'">
+ 	            <div class="thumb"><img src="thumbnails/26.jpg"></div>
+ 	            <div class="desc">Working With Contextual Action Mode</div>
+				</div>
+
+
+				<div class ="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/L4eGSJG4-AmF8jZz7.html'">
+ 	            <div class="thumb"><img src="thumbnails/27.jpg"></div>
+ 	            <div class="desc">List View With Contextual Action Mode</div>
+				</div>
+
+
+
+				<div class ="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/lfFy9ons-AmF8jZz7.html'">
+ 	            <div class="thumb"><img src="thumbnails/29.jpg"></div>
+ 	            <div class="desc">Menu with Radio Button</div>
+				</div>
+
+
+
+				<div class ="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/mZDu2HhL-AmF8jZz7.html'">
+ 	            <div class="thumb"><img src="thumbnails/30.jpg"></div>
+ 	            <div class="desc">Working With Shared Preferences part-1</div>
+				</div>
+
+                    <!--<div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/xG1yI7Fo-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/20.jpg"></div>
+ 	              <div class="desc">ListView with Custom Adapter part-1</div>
  	            </div>-->
-	 	    </div>
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/oVPQKoFV-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/31.jpg"></div>
+ 	              <div class="desc">Menu with Radio Button</div>
+ 	            </div>
+                
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/RHAR5Vfb-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/32.jpg"></div>
+ 	              <div class="desc">Working with SharedPreferences part-1</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/hG2JuK7Z-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/33.jpg"></div>
+ 	              <div class="desc">Working with SharedPreferences part-2</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/7MTSUykY-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/34.jpg"></div>
+ 	              <div class="desc">Insert data into SQLiteDatabase</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/uYcyeq16-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/35.jpg"></div>
+ 	              <div class="desc">Read data from Database Part-1</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/wmNq1Xcs-GWotTI9K.html'">
+ 	              <div class="thumb"><img src="thumbnails/36.jpg"></div>
+ 	              <div class="desc">Read data from Database Part-2</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/iKUA4h2y-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/37.jpg"></div>
+ 	              <div class="desc">Using Where Clause with SQLiteDatabase</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/luJe9suh-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/38.jpg"></div>
+ 	              <div class="desc">Delete information from a Database</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/QviZcx0K-GWotTI9K.html'">
+ 	              <div class="thumb"><img src="thumbnails/39.jpg"></div>
+ 	              <div class="desc">Update Database</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/J2LwTHY8-GWotTI9K.html'">
+ 	              <div class="thumb"><img src="thumbnails/40.jpg"></div>
+ 	              <div class="desc">Introduction to Fragments</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/Xl30Q9eL-AmF8jZz7.html'">
+ 	              <div class="thumb"><img src="thumbnails/41.jpg"></div>
+ 	              <div class="desc">Add a Fragment to an Activity using XML</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/6vMPNnIm-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/42.jpg"></div>
+ 	              <div class="desc">Add a Fragment to an Activity at Runtime</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/4AvWZqBi-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/43.jpg"></div>
+ 	              <div class="desc">Fragment Activity Communication</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/tWeOG5kk-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/44.jpg"></div>
+ 	              <div class="desc">Communication between two Fragments</div>
+ 	            </div>
+                
+                 <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/yAGb6lLx-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/45.jpg"></div>
+ 	              <div class="desc">Supporting Tablets and Handsets- Part-1</div>
+ 	            </div>
+                
+        
+                
+            <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/M7a2u4ch-GWotTI9K.html'">
+ 	              <div class="thumb"><img src="thumbnails/46.jpg"></div>
+ 	              <div class="desc">Supporting Handsets and Tablets Part - II</div>
+ 	            </div>
+ 	        
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/icOJ3duh-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/47.jpg"></div>
+ 	              <div class="desc">Supporting Different Languages</div>
+ 	            </div>
+ 	        
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/YzTJULBT-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/48.jpg"></div>
+ 	              <div class="desc">Save a File on Internal Storage</div>
+ 	            </div>
+ 	        
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/PJqtNL0B-GWotTI9K.html'">
+ 	              <div class="thumb"><img src="thumbnails/49.jpg"></div>
+ 	              <div class="desc">Save a File on External Storage</div>
+ 	            </div>
+ 	        
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/lcu96UIW-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/50.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+ 	        
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/8mjasIfh-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/51.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+ 	        
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/q1SCBAYm-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/52.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+ 	        
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/1CcKrmsO-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/53.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/Mq8g5H2v-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/54.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+ 	        
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/blADm7Em-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/55.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/cWwH3V3O-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/56.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/yyjGm8zz-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/57.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/cIlA2n9p-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/58.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/8gfetLmP-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/59.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/uSkCLffZ-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/60.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/pBSHJqwR-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/61.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/kRO024GR-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/62.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/CLwpSnJ2-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/63.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/yP1nFyPl-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/64.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/XbzkVPH9-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/65.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/PAisrp6N-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/66.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/qtqpFHki-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/67.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/6VoyELcN-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/68.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/XVgVo22s-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/69.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/13RIEzej-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/70.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/13RIEzej-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/71.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/sHTJCgvE-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/72.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/LUZWEQXs-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/73.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/bGx7CNGj-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/74.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+                <div class="vid-item" onClick="document.getElementById('vid_frame').src='https://content.jwplatform.com/players/uzWGVnSy-t74mxYEq.html'">
+ 	              <div class="thumb"><img src="thumbnails/75.jpg"></div>
+ 	              <div class="desc">Installing Android Studio</div>
+ 	            </div>
+                
+            </div>
         </div>
 
         <!-- LEFT AND RIGHT ARROWS -->
@@ -328,35 +657,5 @@
   	</script>
 
 
-  	<!-- google analytics -->
-  	<script type="text/javascript">
-
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-19095819-1']);
-		  _gaq.push(['_trackPageview']);
-
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-
-	</script>
-      <script src="js/jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.js"></script> 
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/Shuffle/4.0.0/shuffle.min.js'></script>
-      
-      <script src="js/chart.js"></script>
-      <script src="js/toolkit.js"></script>
-      <script src="js/application.js"></script>
-      <script src="js/library.js"></script>
-      <script>
-        // execute/clear BS loaders for docs
-        $(function(){
-          if (window.BS&&window.BS.loader&&window.BS.loader.length) {
-            while(BS.loader.length){(BS.loader.pop())()}
-          }
-        })                </script>
-
-  </body>
+    </body>
 </html>
