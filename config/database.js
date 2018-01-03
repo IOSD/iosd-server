@@ -1,5 +1,5 @@
 // config/database.js
 module.exports = {
-    // 'url' : 'mongodb://localhost:27017/passport'  
-    'url' : process.env.iosdmongourl  
+    'url' : 'mongodb://127.0.0.1:27017/passport' ,
+    // 'url' : process.env.iosdmongourl
 };

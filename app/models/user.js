@@ -16,7 +16,6 @@ var userSchema = mongoose.Schema({
     phone: Number,
     picture: String ,
     isAdmin:Boolean,
-    name:String , 
     joinDate : { type:String , default :moment().format('DD-MM-YYYY') }
 
 });

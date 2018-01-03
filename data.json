@@ -1,0 +1,347 @@
+[
+    {
+        "link": "https://content.jwplatform.com/players/wA6saVjt-AmF8jZz7.html",
+        "image": "/thumbnails/01.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/Rb0UVVMt-GWotTI9K.html",
+        "image": "/thumbnails/2.jpg",
+        "title": "Installing and Configure Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/ZVHWBUe6-AmF8jZz7.html",
+        "image": "/thumbnails/03.jpg",
+        "title": "Hello World Application"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/lVdgm54j-AmF8jZz7.html",
+        "image": "/thumbnails/04.jpg",
+        "title": "Working with Multiple Activities"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/O45ZfSIn-AmF8jZz7.html",
+        "image": "/thumbnails/05.jpg",
+        "title": "Create a simple user interface"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/0uDFZmA4-GWotTI9K.html",
+        "image": "/thumbnails/6.jpg",
+        "title": "Send Data to an Activity"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/ucIUjoQv-AmF8jZz7.html",
+        "image": "/thumbnails/07.jpg",
+        "title": "Input Controls - Buttons"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/k11KCs2g-AmF8jZz7.html",
+        "image": "/thumbnails/08.jpg",
+        "title": "Working with Relative Layout"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/Vzvwr6L7-AmF8jZz7.html",
+        "image": "/thumbnails/10.jpg",
+        "title": "Respond to a Button Click Events"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/5xqBE77x-AmF8jZz7.html",
+        "image": "/thumbnails/12.jpg",
+        "title": "Working with Auto Complete Text View"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/ug6GvJOV-AmF8jZz7.html",
+        "image": "/thumbnails/13.jpg",
+        "title": "Working with Checkboxes"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/oukzM9Qe-AmF8jZz7.html",
+        "image": "/thumbnails/14.jpg",
+        "title": "Working with Radio Buttons"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/rSOylo7z-AmF8jZz7.html",
+        "image": "/thumbnails/15.jpg",
+        "title": "Working with Toggle Button"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/LvadEjhI-AmF8jZz7.html",
+        "image": "/thumbnails/17.jpg",
+        "title": "Working with ListView"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/ZZDmCviW-AmF8jZz7.html",
+        "image": "/thumbnails/19.jpg",
+        "title": "Highlight slected item in a List View"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/2GUoA69W-AmF8jZz7.html",
+        "image": "/thumbnails/21.jpg",
+        "title": "Creating a Date Picker"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/eTpM7O6H-AmF8jZz7.html",
+        "image": "/thumbnails/22.jpg",
+        "title": "Working with Options Menu"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/GqEIC3yV-AmF8jZz7.html",
+        "image": "/thumbnails/23.jpg",
+        "title": "Handling Click Events of Options Menu"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/AMoMM4gr-AmF8jZz7.html",
+        "image": "/thumbnails/24.jpg",
+        "title": "Creating a Floating Context Manager"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/x7Ui5lK2-AmF8jZz7.html",
+        "image": "/thumbnails/25.jpg",
+        "title": "Handling Click Events of Floating Context Manager"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/8R6qI0bR-AmF8jZz7.html",
+        "image": "/thumbnails/26.jpg",
+        "title": "Working With Contextual Action Mode"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/L4eGSJG4-AmF8jZz7.html",
+        "image": "/thumbnails/27.jpg",
+        "title": "List View With Contextual Action Mode"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/lfFy9ons-AmF8jZz7.html",
+        "image": "/thumbnails/29.jpg",
+        "title": "Menu with Radio Button"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/mZDu2HhL-AmF8jZz7.html",
+        "image": "/thumbnails/30.jpg",
+        "title": "Working With Shared Preferences part-1"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/oVPQKoFV-AmF8jZz7.html",
+        "image": "/thumbnails/31.jpg",
+        "title": "Menu with Radio Button"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/RHAR5Vfb-AmF8jZz7.html",
+        "image": "/thumbnails/32.jpg",
+        "title": "Working with SharedPreferences part-1"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/hG2JuK7Z-AmF8jZz7.html",
+        "image": "/thumbnails/33.jpg",
+        "title": "Working with SharedPreferences part-2"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/7MTSUykY-AmF8jZz7.html",
+        "image": "/thumbnails/34.jpg",
+        "title": "Insert data into SQLiteDatabase"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/uYcyeq16-AmF8jZz7.html",
+        "image": "/thumbnails/35.jpg",
+        "title": "Read data from Database Part-1"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/wmNq1Xcs-GWotTI9K.html",
+        "image": "/thumbnails/36.jpg",
+        "title": "Read data from Database Part-2"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/iKUA4h2y-AmF8jZz7.html",
+        "image": "/thumbnails/37.jpg",
+        "title": "Using Where Clause with SQLiteDatabase"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/luJe9suh-AmF8jZz7.html",
+        "image": "/thumbnails/38.jpg",
+        "title": "Delete information from a Database"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/QviZcx0K-GWotTI9K.html",
+        "image": "/thumbnails/39.jpg",
+        "title": "Update Database"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/J2LwTHY8-GWotTI9K.html",
+        "image": "/thumbnails/40.jpg",
+        "title": "Introduction to Fragments"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/Xl30Q9eL-AmF8jZz7.html",
+        "image": "/thumbnails/41.jpg",
+        "title": "Add a Fragment to an Activity using XML"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/6vMPNnIm-t74mxYEq.html",
+        "image": "/thumbnails/42.jpg",
+        "title": "Add a Fragment to an Activity at Runtime"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/4AvWZqBi-t74mxYEq.html",
+        "image": "/thumbnails/43.jpg",
+        "title": "Fragment Activity Communication"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/tWeOG5kk-t74mxYEq.html",
+        "image": "/thumbnails/44.jpg",
+        "title": "Communication between two Fragments"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/yAGb6lLx-t74mxYEq.html",
+        "image": "/thumbnails/45.jpg",
+        "title": "Supporting Tablets and Handsets- Part-1"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/M7a2u4ch-GWotTI9K.html",
+        "image": "/thumbnails/46.jpg",
+        "title": "Supporting Handsets and Tablets Part - II"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/icOJ3duh-t74mxYEq.html",
+        "image": "/thumbnails/47.jpg",
+        "title": "Supporting Different Languages"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/YzTJULBT-t74mxYEq.html",
+        "image": "/thumbnails/48.jpg",
+        "title": "Save a File on Internal Storage"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/PJqtNL0B-GWotTI9K.html",
+        "image": "/thumbnails/49.jpg",
+        "title": "Save a File on External Storage"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/lcu96UIW-t74mxYEq.html",
+        "image": "/thumbnails/50.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/8mjasIfh-t74mxYEq.html",
+        "image": "/thumbnails/51.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/q1SCBAYm-t74mxYEq.html",
+        "image": "/thumbnails/52.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/1CcKrmsO-t74mxYEq.html",
+        "image": "/thumbnails/53.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/Mq8g5H2v-t74mxYEq.html",
+        "image": "/thumbnails/54.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/blADm7Em-t74mxYEq.html",
+        "image": "/thumbnails/55.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/cWwH3V3O-t74mxYEq.html",
+        "image": "/thumbnails/56.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/yyjGm8zz-t74mxYEq.html",
+        "image": "/thumbnails/57.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/cIlA2n9p-t74mxYEq.html",
+        "image": "/thumbnails/58.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/8gfetLmP-t74mxYEq.html",
+        "image": "/thumbnails/59.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/uSkCLffZ-t74mxYEq.html",
+        "image": "/thumbnails/60.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/pBSHJqwR-t74mxYEq.html",
+        "image": "/thumbnails/61.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/kRO024GR-t74mxYEq.html",
+        "image": "/thumbnails/62.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/CLwpSnJ2-t74mxYEq.html",
+        "image": "/thumbnails/63.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/yP1nFyPl-t74mxYEq.html",
+        "image": "/thumbnails/64.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/XbzkVPH9-t74mxYEq.html",
+        "image": "/thumbnails/65.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/PAisrp6N-t74mxYEq.html",
+        "image": "/thumbnails/66.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/qtqpFHki-t74mxYEq.html",
+        "image": "/thumbnails/67.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/6VoyELcN-t74mxYEq.html",
+        "image": "/thumbnails/68.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/XVgVo22s-t74mxYEq.html",
+        "image": "/thumbnails/69.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/13RIEzej-t74mxYEq.html",
+        "image": "/thumbnails/70.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/13RIEzej-t74mxYEq.html",
+        "image": "/thumbnails/71.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/sHTJCgvE-t74mxYEq.html",
+        "image": "/thumbnails/72.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/LUZWEQXs-t74mxYEq.html",
+        "image": "/thumbnails/73.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/bGx7CNGj-t74mxYEq.html",
+        "image": "/thumbnails/74.jpg",
+        "title": "Installing Android Studio"
+    },
+    {
+        "link": "https://content.jwplatform.com/players/uzWGVnSy-t74mxYEq.html",
+        "image": "/thumbnails/75.jpg",
+        "title": "Installing Android Studio"
+    }
+]

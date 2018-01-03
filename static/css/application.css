@@ -74,3 +74,22 @@
 .app-brand img {
   width: 100%;
 }
+
+
+@media (min-width: 1260px){
+  .container {
+    width: 95%;
+  }
+}
+
+.app-navbar {
+  height: 8vh;
+}
+
+.app-navbar .container{
+  margin-top: 1vh;
+}
+
+.p-t-md {
+  padding-top: 7vh !important;
+}

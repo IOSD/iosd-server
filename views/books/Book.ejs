@@ -73,7 +73,7 @@
     <div class="row">
         <h1 style="text-align: center">Add a New Book</h1>
         <div style="width: 30%; margin: 25px auto;">
-            <form action="/books/<%= book._id %>" method="POST">
+            <form action="/books/edit/<%= book._id %>" method="POST">
                 <div class="form-group">
                     <input class="form-control" type="text" name="name" placeholder="Name" value="<%=book.name%>" required>
                 </div>

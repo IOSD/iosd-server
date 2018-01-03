@@ -74,33 +74,25 @@
  <div class="container" style="margin-top:20px;">
      <header class="jumbotron">
          <div class="container">
-             <h1>Welcome To Library-Admin!</h1>
-             <p>Database of the library is available</p>
+             <h1>Welcome To Playlists-Admin!</h1>
+             <p>Database of the Playlists is available</p>
              <p>
-                <a class="btn btn-primary btn-large" href="/book/new">Add New Book</a>
+                <a class="btn btn-primary btn-large" href="/playlist/new">Add New Playlist</a>
              </p>
          </div>
      </header>
-     
-     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
-        <% books.forEach(function(book){ %>
-            <div class="col-md-3 col-sm-6">
-                <div class="thumbnail">
-                   <img src="<%=book.image%>">
-                   <div class="caption">
-                       <h4><%= book.name %></h4>
-                        <h5>info</h5>
-                   </div>
-                       
-                   <p>
-                       <a href="/books/<%= book._id %>" class="btn btn-primary">More Info</a>
-                       <a href="/books/delete/<%= book._id %>" class="btn btn-danger">Delete</a>
-                   </p>
-                      
-                </div>
-            </div>
-        <% }); %>
-    </div>
+     <h2>Playlists</h2>
+     <ul>
+        <% for( i in playlists ) { %>
+            <li>
+                <h3><%= playlists[i] %>  </h3>
+                <p>
+                    <a href="/playlist/edit/<%= i %>" class="btn btn-primary">More Info</a>
+                    <a href="/playlist/delete/<%= i %>" class="btn btn-danger">Delete</a>
+                </p>
+            </li>
+        <% } %>
+    </ul>
 </div>
 <script src="../js/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.js"></script> 
