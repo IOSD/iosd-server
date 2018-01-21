@@ -19,6 +19,15 @@
     <link href="css/toolkit.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/application.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <style>
+        /* Prevents slides from flashing */
+        #slides {
+            display: none;
+        }
+    </style>
 
     <style>
         /* note: this is a hack for ios iframe for bootstrap themes shopify page */
@@ -148,9 +157,7 @@
 
             <div class="panel panel-default visible-md-block visible-lg-block">
                 <div class="panel-body">
-                    <h5 class="m-t-0">About
-                        <small>· <a href="#"></a></small>
-                    </h5>
+                    <h5 class="m-t-0">About</h5>
                     <ul class="list-unstyled list-spaced">
                         <li><i class="fa fa-university" aria-hidden="true"></i>&ensp;Went to <a
                                     href="#"><%= user.college %></a></li>
@@ -168,54 +175,94 @@
                 </div>
             </div>
             <div class="panel panel-default m-b-md hidden-xs">
+                <div>
+                </div>
                 <div class="panel-body">
                     <h5 class="m-t-0">Events</h5>
-                    <div data-grid="images" data-target-height="150">
-                        <img class="media-object" data-width="640" data-height="640" data-action="zoom"
-                             src="images/dashboard/hackdtu.jpg">
+                    <div id="events-slides" class="owl-carousel owl-theme">
+                        <div class="owl-item">
+                            <p class="m-t-0">HackDTU 2.0</p>
+                            <img src="images/dashboard/hackdtu.jpg" alt="" class="img-responsive">
+                            <br>
+                            <a href="http://www.hackdtu.tech" class="btn btn-primary-outline btn-sm">Register Now!</a>
+                        </div>
+                        <div class="owl-item">
+                            <h5 class="m-t-0">HackDTU 2.0</h5>
+                            <img src="images/dashboard/hackdtu.jpg" alt="" class="img-responsive">
+                            <br>
+                            <a href="http://www.hackdtu.tech" class="btn btn-primary-outline btn-sm">Register Now!</a>
+                        </div>
+                        <div class="owl-item">
+                            <h5 class="m-t-0">HackDTU 2.0</h5>
+                            <img src="images/dashboard/hackdtu.jpg" alt="" class="img-responsive">
+                            <br>
+                            <a href="http://www.hackdtu.tech" class="btn btn-primary-outline btn-sm">Register Now!</a>
+                        </div>
                     </div>
-                    <p><strong>HACKDTU 2.0</strong></p>
-                    <a href="http://www.hackdtu.tech" class="btn btn-primary-outline btn-sm">Register Now!</a>
                 </div>
             </div>
 
             <div class="panel panel-default m-b-md hidden-xs">
                 <div class="panel-body">
-                    <h5 class="m-t-0">Mentors
-                        <small>· <a href="#">View All</a></small>
+                    <h5 class="m-t-0">
+                        Mentors
                     </h5>
-                    <ul class="media-list media-list-stream">
-                        <li class="media m-b">
-                            <a class="media-left" href="#">
-                                <img
-                                        class="media-object img-circle"
-                                        src="images/dashboard/krishnarai.jpg">
-                            </a>
-                            <div class="media-body">
-                                <strong>Krishna Rai</strong>&ensp;@RAI.KRISHNA
-                                <div class="media-body-actions">
-                                    <a class="btn btn-primary-outline btn-sm"
-                                       href="https://www.facebook.com/RAI.KRISHNA">
-                                        <span class="icon icon-phone"></span>Contact</a>
+                    <div id="mentor-slider" class="owl-carousel owl-theme">
+                        <div class="owl-item">
+                            <div style="margin-bottom: 10px;">
+                                <img class="img-responsive img-circle" src="images/dashboard/krishnarai.jpg">
+                            </div>
+
+                            <div class="text-center">
+                                <strong>Krishna Rai</strong><br>
+                                <small>Android Developer</small>
+                                <div style="margin-top: 10px">
+                                    <a href="https://www.facebook.com/RAI.KRISHNA">
+                                        <button class="btn btn-primary-outline btn-sm">
+                                            Contact
+                                        </button>
+                                    </a>
+
                                 </div>
                             </div>
-                        </li>
-                        <li class="media">
-                            <a class="media-left" href="#">
-                                <img
-                                        class="media-object img-circle"
-                                        src="images/dashboard/nikhilpandey.jpg">
-                            </a>
-                            <div class="media-body">
-                                <strong>Nikhil Pandey</strong>&ensp;@menikhilpandey
-                                <div class="media-body-actions">
-                                    <a class="btn btn-primary-outline btn-sm"
-                                       href="https://www.facebook.com/menikhilpandey">
-                                        <span class="icon icon-phone"></span>Conact</a>
+                        </div>
+                        <div class="owl-item">
+                            <div style="margin-bottom: 10px;">
+                                <img class="img-responsive img-circle" src="images/dashboard/nikhilpandey.jpg">
+                            </div>
+
+                            <div class="text-center">
+                                <strong>Nikhil Pandey</strong><br>
+                                <small>ML Expert</small>
+                                <div style="margin-top: 10px">
+                                    <a href="https://www.facebook.com/#">
+                                        <button class="btn btn-primary-outline btn-sm">
+                                            Contact
+                                        </button>
+                                    </a>
+
                                 </div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="owl-item">
+                            <div style="margin-bottom: 10px;">
+                                <img class="img-responsive img-circle" src="images/dashboard/dhruvramdev.jpg">
+                            </div>
+
+                            <div class="text-center">
+                                <strong>Dhruv Ramdev</strong><br>
+                                <small>Web Developer</small>
+                                <div style="margin-top: 10px">
+                                    <a href="https://www.facebook.com/RAI.KRISHNA">
+                                        <button class="btn btn-primary-outline btn-sm">
+                                            Contact
+                                        </button>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -271,7 +318,9 @@
                 <div class="panel-body">
                     <div><h4>Twitter Feed</h4></div>
                     <div>
-                        <a class="twitter-timeline" data-height="80vh" href="https://twitter.com/iosdofficial?ref_src=twsrc%5Etfw">Tweets by iosdofficial</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a class="twitter-timeline" data-height="80vh"
+                           href="https://twitter.com/iosdofficial?ref_src=twsrc%5Etfw">Tweets by iosdofficial</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
             </div>
@@ -281,7 +330,8 @@
                     <div><h4>Instragram Feed</h4></div>
                     <div>
                         <!-- InstaWidget -->
-                        <a href="https://instawidget.net/v/user/iosdofficial" id="link-a897d9cbc46f93189342bafff44a5cb47b666e8d70c59ab8aab32b6d9022be89">@iosdofficial</a>
+                        <a href="https://instawidget.net/v/user/iosdofficial"
+                           id="link-a897d9cbc46f93189342bafff44a5cb47b666e8d70c59ab8aab32b6d9022be89">@iosdofficial</a>
                         <script src="https://instawidget.net/js/instawidget.js?u=a897d9cbc46f93189342bafff44a5cb47b666e8d70c59ab8aab32b6d9022be89&width=100%"></script>
                     </div>
                 </div>
@@ -300,6 +350,9 @@
 <script src="./github-feed/moment.js"></script>
 <script src="./github-feed/mithril.min.js"></script>
 <script src="./github-feed/index.js"></script>
+
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
 
 <script>
     // execute/clear BS loaders for docs
@@ -322,7 +375,6 @@
         js.src = 'https://connect.facebook.net/en_IN/sdk.js#xfbml=1&version=v2.11&appId=266925677039036';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-
 
 </body>
 </html>
