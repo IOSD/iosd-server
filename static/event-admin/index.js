@@ -63,18 +63,19 @@
         var $clone = $TABLE.find('tr.invisible').clone(true)
         var children = $clone.children() ;
         // console.log(children)
-        children.eq(0).text(val.url);
+        // children.eq(0).text(val.url);
         var start = new Date(parseInt(val.start));
         // console.log(start)
         var formattedDate = moment(start).format('YYYY-MM-DD HH:MM:SS');
-        children.eq(1).text(formattedDate)
+        children.eq(0).text(formattedDate);
         
         var end = new Date(parseInt(val.end));
         var formattedDate = moment(end).format('YYYY-MM-DD HH:MM:SS');
-        children.eq(2).text(formattedDate)
+        children.eq(1).text(formattedDate);
         // children.eq(2).text(val.end)
-        children.eq(3).text(val.title)
-        children.eq(4).text(val.class)
+        children.eq(2).text(val.title);
+        children.eq(3).text(val.class);
+        children.eq(4).text(val.description);
 
         $clone.removeClass('invisible table-line')
         $TABLE.find('table').append($clone);
@@ -153,7 +154,9 @@
       'college' : $('#college_selected').val() ,
       'college_name' : $('#college_name_selected').val() ,
       'events' : data 
-    }
+    };
+
+
     $.post( "events-admin", payload)
     .done(function(res) {
       $EXPORT.text(JSON.stringify(res , null , indent=4));

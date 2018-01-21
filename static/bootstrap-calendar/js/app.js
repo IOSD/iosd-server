@@ -39,7 +39,15 @@ var setCalendar = function($) {
 	};
 
 	var calendar = $('#calendar').calendar(options);
-	calendar.setOptions({modal: '#myModal'});
+	calendar.setOptions({
+		modal: '#myModal' ,
+        modal_type : 'template' ,
+        modal_title : function (e) {
+			console.log(e);
+			return e.title
+
+        }
+    });
 	// calendar.setOptions({modal_t});
 
 

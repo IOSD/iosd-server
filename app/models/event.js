@@ -8,7 +8,7 @@ var eventScheme = mongoose.Schema({
     events : [{
         id: {type: Number , default: function() {  return parseInt(Math.random() * 1000000000) } },
         title: String,
-        url: String,
+        description: String,
         class: String,
         start: String,
         end: String
